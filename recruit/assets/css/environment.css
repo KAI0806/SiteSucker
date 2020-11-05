@@ -1,0 +1,669 @@
+
+
+/* modal
+----------------------------------------------- */
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.8);
+	overflow: hidden;
+	z-index: 10;
+}
+.modal__inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.modal__close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	transform: rotate(45deg);
+	transition-property: transform;
+	transition-duration: 0.25s;
+	transition-delay: 0s;
+}
+.modal__close:before,
+.modal__close:after {
+	display: block;
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: #fff;
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-delay: 0s;
+}
+.modal__close:before {
+	margin: -1px 0 0 -25px;
+	width: 50px;
+	height: 1px;
+}
+.modal__close:after {
+	margin: -25px 0 0 -1px;
+	width: 1px;
+	height: 50px;
+	opacity: 1;
+}
+
+/* js */
+
+.js-modal-ready.modal {
+	display: block;
+	height: 0;
+	pointer-events: none;
+	opacity: 0;
+	visibility: hidden;
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-delay: 0s;
+}
+.js-modal-ready .modal__inner {
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-delay: 0s;
+}
+.js-modal-ready .modal__close:before,
+.js-modal-ready .modal__close:after {
+	width: 0;
+	height: 0;
+	transition-property: width, height;
+	transition-duration: 0.25s;
+	transition-delay: 0s;
+}
+
+.js-modal-start.modal {
+	height: 100vh;
+	pointer-events: all;
+	visibility: visible;
+	opacity: 1;
+	transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.js-modal-start .modal__inner {
+	opacity: 1;
+	transition-delay: 0.25s;
+	transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+.js-modal-start .modal__close:before {
+	width: 50px;
+	height: 1px;
+	transition-delay: 0.35s;
+}
+.js-modal-start .modal__close:after {
+	width: 1px;
+	height: 50px;
+	transition-delay: 0.45s;
+}
+
+
+/* movie
+----------------------------------------------- */
+
+.movie {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0 10vw;
+	width: calc(100% - 20vw);
+	height: 100%;
+}
+.movie__inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	position: relative;
+	padding: 56.25% 0 0;
+	width: 100%;
+	transform: translate(-50%,-50%);
+}
+.movie__inner iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* pc
+----------------------------------------------- */
+
+@media print, screen and (min-width:1000px) {
+
+
+	/* intro
+	----------------------------------------------- */
+
+	.intro {
+		padding: 100px 0 0;
+	}
+	.intro__inner {
+		margin: auto;
+		width: 1000px;
+		text-align: center;
+	}
+	.intro__title {
+		position: relative;
+		padding: 75px 0;
+		background: url("../../office/images/bg.jpg") repeat center top;
+	}
+	.intro__title:before,
+	.intro__title:after {
+		display: block;
+		content: "";
+		position: absolute;
+		width: 260px;
+		height: 236px;
+		background-position: left top;
+		background-repeat: no-repeat;
+		background-size: 260px 236px;
+	}
+	.intro__title:before {
+		bottom: -80px;
+		left: -50px;
+		background-image: url("../../office/images/intro_image01.png");
+	}
+	.intro__title:after {
+		top: -80px;
+		right: -65px;
+		background-image: url("../../office/images/intro_image02.png");
+	}
+	.intro__text {
+		margin: 25px 0 0;
+		font-size: 16px;
+		line-height: 27px;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+	}
+
+
+	/* gallery
+	----------------------------------------------- */
+
+	.gallery {
+		margin: 80px 0 0;
+	}
+	.gallery:before {
+		display: block;
+		content: "";
+		margin-left: calc(((100vw - 100%) / 2) * -1);
+		margin-right: calc(((100vw - 100%) / 2) * -1);
+		height: 240px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+	}
+	.gallery-receptionarea:before {
+		background-image: url("../../office/images/receptionarea_bg.jpg");
+	}
+	.gallery-officearea:before {
+		background-image: url("../../office/images/officearea_bg.jpg");
+	}
+	.gallery-meetingroom:before {
+		background-image: url("../../office/images/meetingroom_bg.jpg");
+	}
+	.gallery-canteen:before {
+		background-image: url("../../office/images/canteen_bg.jpg");
+	}
+	.gallery-tunneltokyo:before {
+		background-image: url("../../office/images/tunneltokyo_bg.jpg");
+	}
+	.gallery-motion:before {
+		background-image: url("../../office/images/motion_bg.jpg");
+	}
+	.gallery__title {
+		margin: -50px 0 0;
+		padding: 45px 0 0;
+		background: #fff;
+	}
+	.gallery__columns {
+		margin: 15px -18px 0 -17px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.gallery__column {
+		margin: 15px 18px 0 17px;
+		width: 310px;
+	}
+	.gallery__imagecolumns {
+		margin: 0 -18px 0 -17px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.gallery__imagecolumn {
+		margin: 0 18px 0 17px;
+		width: 310px;
+	}
+	.gallery__image__item {
+		margin: 0 0 15px;
+		display: block;
+		overflow: hidden;
+	}
+	.gallery__image img {
+		width: 100%;
+		height: auto;
+		transition-property: opacity, transform;
+		transition-duration: 0.35s;
+		transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+	}
+	.gallery__image a {
+		position: relative;
+		display: block;
+		background: #0096fa;
+	}
+	.gallery__image a:before,
+	.gallery__image a:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background: #fff;
+		z-index: 1;
+		opacity: 0;
+		transform: scale(0.5) rotate(0.1deg);
+		transition-property: opacity, transform;
+		transition-duration: 0.35s;
+		transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+	}
+	.gallery__image a:before {
+		margin: -20px 0 0;
+		width: 1px;
+		height: 40px;
+	}
+	.gallery__image a:after {
+		margin: 0 0 0 -20px;
+		width: 40px;
+		height: 1px;
+	}
+	.gallery__image a:hover img {
+		opacity: 0.6;
+		transform: scale(1.1);
+	}
+	.gallery__image a:hover:before,
+	.gallery__image a:hover:after {
+		opacity: 1;
+		transform: scale(1) rotate(0.1deg);
+	}
+	.gallery__subtitle {
+		font-size: 18px;
+		font-weight: 700;
+		text-align: center;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		line-height: 23px;
+	}
+	.gallery__label {
+		display: block;
+		padding:  0 0 5px;
+		font-family: "Oswald";
+		font-size: 16px;
+		text-align: center;
+		font-weight: 500;
+		line-height: 22px;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		color: #0096fa;
+	}
+	.gallery__summary {
+		padding: 10px 0 0;
+		font-size: 16px;
+		text-align: justify;
+		text-justify: inter-ideograph;
+		line-height: 27px;
+		letter-spacing: 0.1em;
+	}
+
+	/* meetingarea */
+	.gallery__columns-meetingarea {
+		position: relative;
+		margin: 35px -40px 25px;
+		padding: 25px 0 25px;
+		background: url("../../office/images/bg.jpg") repeat center top;
+	}
+	.gallery__columns-meetingarea .gallery__column {
+		order: 3;
+	}
+	.gallery__columns-meetingarea .gallery__column:nth-child(1),
+	.gallery__columns-meetingarea .gallery__column:nth-child(3),
+	.gallery__columns-meetingarea .gallery__column:nth-child(4) {
+		order: 1;
+	}
+	.gallery__columns-meetingarea .gallery__column:nth-child(2) {
+		order: 2;
+	}
+
+	/* column-middle */
+	.gallery__column-middle {
+		width: 655px;
+	}
+	.gallery__column-middle .gallery__subtitle,
+	.gallery__column-middle .gallery__label,
+	.gallery__column-middle .gallery__summary {
+		margin: 0 17px 0 18px;
+	}
+
+	/* column-wide */
+	.gallery__column-wide {
+		width: 1000px;
+	}
+
+
+	/* officemovie
+	----------------------------------------------- */
+
+	.officemovie {
+		position: relative;
+		margin: 15px;
+		width: 280px;
+		height: 280px;
+		background: url("../../office/images/movie_image.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 50%;
+		box-sizing: border-box;
+		cursor: pointer;
+	}
+	.officemovie:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: -15px;
+		left: -15px;
+		right: -15px;
+		bottom: -15px;
+		background: url("../../office/images/movie_mask.png");
+		background-position: center center;
+		background-repeat: repeat;
+		background-size: 11px 10px;
+		border-radius: 50%;
+		transition-property: opacity, transform;
+		transition-duration: 0.25s, 0.5s;
+		transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1), cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+	.officemovie__inner {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		color: #fff;
+		text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+		transform: translateY(-30%);
+		z-index: 1;
+	}
+	.officemovie__title {
+		font-size: 18px;
+		font-weight: 700;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+	}
+	.officemovie__label {
+		padding: 10px 0 0;
+		font-family: "Oswald";
+		font-size: 12px;
+		font-weight: 500;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+	}
+	.officemovie__play {
+		margin: 20px auto 0;
+		width: 50px;
+		height: 50px;
+		background: url("../../office/images/ic_movieplay.svg");
+		background-position: left top;
+		background-repeat: no-repeat;
+	}
+
+	/* hover */
+	
+	.officemovie:hover:after {
+		opacity: 0.5;
+		transform: scale(0.9);
+	}
+
+
+}
+
+
+/* mobile
+----------------------------------------------- */
+
+@media only screen and (max-width:999px) {
+
+
+	/* intro
+	----------------------------------------------- */
+
+	.intro {
+		padding: 20px 0 0;
+	}
+	.intro__inner {
+		margin: auto;
+		max-width: 600px;
+	}
+	.intro__title {
+		position: relative;
+		padding: 40px 50px;
+		text-align: center;
+		background: url("../../office/images/bg.jpg") repeat center top;
+		background-size: 500px 120px;
+	}
+	.intro__title img {
+		width: 100%;
+		max-width: 300px;
+		height: auto;
+	}
+	.intro__title:before,
+	.intro__title:after {
+		display: block;
+		content: "";
+		position: absolute;
+		width: 130px;
+		height: 118px;
+		background-position: left top;
+		background-repeat: no-repeat;
+		background-size: 130px 118px;
+		opacity: 0.6;
+	}
+	.intro__title:before {
+		bottom: -20px;
+		left: -15px;
+		background-image: url("../../office/images/intro_image01.png");
+	}
+	.intro__title:after {
+		top: -20px;
+		right: -15px;
+		background-image: url("../../office/images/intro_image02.png");
+	}
+	.intro__text {
+		margin: 20px 0 0;
+		text-align: center;
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+
+	/* gallery
+	----------------------------------------------- */
+
+	.gallery {
+		margin: 35px 0 0;
+	}
+	.gallery:before {
+		display: block;
+		content: "";
+		margin-left: calc(((100vw - 100%) / 2) * -1);
+		margin-right: calc(((100vw - 100%) / 2) * -1);
+		height: 100px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+	}
+	.gallery-receptionarea:before {
+		background-image: url("../../office/images/receptionarea_bg.jpg");
+	}
+	.gallery-officearea:before {
+		background-image: url("../../office/images/officearea_bg.jpg");
+	}
+	.gallery-meetingroom:before {
+		background-image: url("../../office/images/meetingroom_bg.jpg");
+	}
+	.gallery-canteen:before {
+		background-image: url("../../office/images/canteen_bg.jpg");
+	}
+	.gallery-tunneltokyo:before {
+		background-image: url("../../office/images/tunneltokyo_bg.jpg");
+	}
+	.gallery-motion:before {
+		background-image: url("../../office/images/motion_bg.jpg");
+	}
+	.gallery__title {
+		margin: -30px 20px 0;
+		padding: 30px 0 0;
+		background: #fff;
+	}
+	.gallery__columns {
+		margin: 0 20px;
+	}
+	.gallery__column {
+		margin: 20px 0 0;
+	}
+	.gallery__image img {
+		width: 100%;
+		height: auto;
+	}
+	.gallery__image__item {
+		display: block;
+		padding: 2px 0 0;
+	}
+	.gallery__image__item a {
+		display: block;
+	}
+	.gallery__subtitle {
+		margin: 10px 0 0;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		line-height: 20px;
+	}
+	.gallery__label {
+		display: block;
+		padding:  0 0 2px;
+		font-family: "Oswald";
+		font-size: 12px;
+		text-align: center;
+		font-weight: 500;
+		line-height: 16px;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		color: #0096fa;
+	}
+	.gallery__summary {
+		padding: 5px 0 0;
+		font-size: 12px;
+		text-align: justify;
+		line-height: 18px;
+	}
+
+	/* meetingarea */
+	.gallery__columns-meetingarea {
+		margin: 20px 20px 0;
+		padding: 15px;
+		background: url("../../office/images/bg.jpg") repeat center top;
+		background-size: 500px 120px;
+	}
+	.gallery__columns-meetingarea .gallery__column {
+		margin: 0;
+	}
+	.gallery__columns-meetingarea .gallery__column:nth-child(2) {
+		padding: 0 0 15px;
+	}
+
+
+	/* officemovie
+	----------------------------------------------- */
+
+	.officemovie {
+		position: relative;
+		margin: 40px auto 40px;
+		width: 150px;
+		height: 150px;
+		background: url("../../office/images/movie_image.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 50%;
+		box-sizing: border-box;
+		cursor: pointer;
+	}
+	.officemovie:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: -10px;
+		left: -10px;
+		right: -10px;
+		bottom: -10px;
+		background: url("../../office/images/movie_mask.png");
+		background-position: center center;
+		background-repeat: repeat;
+		background-size: 11px 10px;
+		border-radius: 50%;
+		transition-property: opacity, transform;
+		transition-duration: 0.25s, 0.5s;
+		transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1), cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+	.officemovie__inner {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		color: #fff;
+		text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+		transform: translateY(-30%);
+		z-index: 1;
+	}
+	.officemovie__title {
+		font-size: 14px;
+		font-weight: bold;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+	}
+	.officemovie__label {
+		padding: 5px 0 0;
+		font-family: "Oswald";
+		font-size: 10px;
+		font-weight: 500;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+	}
+	.officemovie__play {
+		margin: 20px auto 0;
+		width: 50px;
+		height: 50px;
+		background: url("../../office/images/ic_movieplay.svg");
+		background-position: left top;
+		background-repeat: no-repeat;
+	}
+
+
+}
+

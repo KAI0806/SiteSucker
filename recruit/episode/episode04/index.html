@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-N85KQCV');</script>
+		<!-- End Google Tag Manager -->
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="株式会社セガの新卒・中途・アルバイト採用サイトです。『CHUNITHM』開発秘話などをご覧いただけます。">
+		<meta name="keywords" content="SEGA,セガ,セガネットワークス,SEGANETWORKS,新卒採用,中途採用,アルバイト採用,就職,CHUNITHM,ゲーム,スマホ,アプリ,プランナー,プログラマ,ゲームプログラマ,エンジニア,ITエンジニア,デザイナー,アミューズメント,アーケード">
+
+		<meta property="og:type" content="article">
+		<meta property="og:site_name" content="採用サイト｜株式会社セガ -【SEGA Co., Ltd.】">
+		<meta property="og:title" content="『CHUNITHM』開発者インタビュー | 採用サイト｜株式会社セガ -【SEGA Co., Ltd.】">
+		<meta property="og:description" content="株式会社セガの新卒・中途・アルバイト採用サイトです。『CHUNITHM』開発秘話などをご覧いただけます。">
+		<meta property="og:url" content="https://www.sega.co.jp/recruit/episode/episode04/">
+		<meta property="og:image" content="https://www.sega.co.jp/recruit/assets/images/ogp.png">
+		<meta name="twitter:card" content="summary_large_image">
+		
+		<title>『CHUNITHM』開発者インタビュー | 採用サイト｜株式会社セガ -【SEGA Co., Ltd.】</title>
+
+		<link rel="icon" href="../../../favicon.ico">
+		<link rel="apple-touch-icon" href="../../assets/images/touch.png">
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+		<link rel="dns-prefetch" href="https://ajax.googleapis.com">
+		<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700" media="only screen and (min-width:1000px)">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,500">
+		<link rel="stylesheet" href="../../assets/css/normalize.css">
+		<link rel="stylesheet" href="../../assets/css/main.css">
+		<link rel="stylesheet" href="../../assets/css/episode.css">
+
+	</head>
+	<body class="current-episode">
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N85KQCV"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+
+		
+
+		<!-- header -->
+		<header class="header js-header">
+			<div class="header__inner">
+				<h1 class="header__logo">
+					<a href="../../../index.html">
+						<img src="../../assets/images/header_logo.svg" alt="株式会社セガ -【SEGA Co., Ltd.】" width="110" height="60">
+					</a>
+				</h1>
+				<div class="header__title">
+					<a href="../../index.html">
+						<img src="../../assets/images/header_title.svg" alt="セガ採用サイト" width="92" height="32">
+					</a>
+				</div>
+			</div>
+			<div class="header__based">
+				<div class="header__base"></div>
+			</div>
+		</header>
+		<!-- /header -->
+		
+		
+		<!-- nav -->
+		<nav class="nav js-nav">
+			<div class="nav__inner">
+
+				<div class="nav__columns">
+					<div class="nav__column nav__column-home">
+						<div class="nav__menu">
+							<a href="../../index.html">
+								トップ
+							</a>
+						</div>
+					</div>
+					<div class="nav__column nav__column-company js-nav-column">
+						<div class="nav__menu">
+							<a href="index.html#nav_company">
+								会社紹介
+							</a>
+						</div>
+						<div class="nav__submenu">
+							<div class="nav__items">
+								<a href="../../message/index.html" class="nav__item">
+									代表者メッセージ
+								</a>
+								<a href="../../../company/outline/index.html" target="_blank" class="nav__item nav__item-blank">
+									会社概要
+								</a>
+								<a href="../../../company/about/index.html" target="_blank" class="nav__item nav__item-blank">
+									事業内容
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="nav__column nav__column-environment js-nav-column">
+						<div class="nav__menu">
+							<a href="index.html#nav_environment">
+								働く環境
+							</a>
+						</div>
+						<div class="nav__submenu">
+							<div class="nav__items">
+								<a href="../../welfare/index.html" class="nav__item">
+									多様な働き方/<br class="pcbr">福利厚生
+								</a>
+								<a href="../../training/index.html" class="nav__item">
+									研修制度
+								</a>
+								<a href="../../communication/index.html" class="nav__item">
+									社員同士のコミュニケーション
+								</a>
+								<a href="../../office/index.html" class="nav__item">
+									大崎オフィス紹介
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="nav__column nav__column-interview js-nav-column">
+						<div class="nav__menu">
+							<a href="index.html#nav_interview">
+								社員紹介
+							</a>
+						</div>
+						<div class="nav__submenu">
+							<div class="nav__items nav__items-short">
+								<a href="../../interview/index.html#senior" class="nav__item js-nav-item-anchor">
+									先輩社員インタビュー
+								</a>
+								<a href="../../interview/index.html#new" class="nav__item js-nav-item-anchor">
+									新入社員インタビュー
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="nav__column nav__column-episode js-nav-column">
+						<div class="nav__menu">
+							<a href="index.html#nav_episode">
+								ゲームができるまで
+							</a>
+						</div>
+						<div class="nav__submenu">
+							<div class="nav__items nav__items-column">
+								<a href="../episode01/index.html" class="nav__item">
+									『JUDGE EYES：死神の遺言』
+								</a>
+								<a href="../episode02/index.html" class="nav__item">
+									『新サクラ大戦』
+								</a>
+								<a href="../episode03/index.html" class="nav__item">
+									『サカつくRTW』
+								</a>
+								<a href="index.html" class="nav__item">
+									『CHUNITHM』
+								</a>
+								<a href="../episode05/index.html" class="nav__item">
+									『プライズ』
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="nav__column nav__column-recruit js-nav-column">
+						<div class="nav__menu">
+							<a href="index.html#nav_recruit">
+								採用情報
+							</a>
+						</div>
+						<div class="nav__submenu">
+							<div class="nav__items">
+								<a href="../../fresh/index.html" class="nav__item">
+									新卒採用
+								</a>
+								<a href="../../career/index.html" class="nav__item">
+									中途採用
+								</a>
+								<a href="../../parttime/index.html" class="nav__item">
+									アルバイト採用
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="nav__column nav__column-event">
+						<div class="nav__menu">
+							<a href="../../event/index.html">
+								イベント情報
+							</a>
+						</div>
+					</div>
+				</div>
+	
+				<div class="sns">
+					<div class="sns__item sns__item-facebook">
+						<a href="https://www.facebook.com/sega.jp" target="_blank">
+							Facebook
+						</a>
+					</div>
+					<div class="sns__item sns__item-twitter">
+						<a href="https://twitter.com/SEGA_OFFICIAL" target="_blank">
+							Twitter
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="nav__control js-nav-control"></div>
+		</nav>
+		<!-- /nav -->
+
+
+		<!-- main -->
+		<main class="main">
+			<div class="main__inner">
+				
+				
+				<!-- contents -->
+				<section class="contents">
+					
+					
+					<!-- pagetitle -->
+					<div class="pagetitle js-parallax">
+						<div class="pagetitle__inner">
+							<div class="pagetitle__label">
+								EPISODE
+							</div>
+							<h2 class="pagetitle__text">
+								ゲームができるまで
+							</h2>
+						</div>
+					</div>
+					<!-- /pagetitle -->
+
+
+					<!-- intro -->
+					<div class="intro">
+						<div class="intro__inner">
+							<figure class="intro__image">
+								<img src="images/mainimage.jpg" alt="" width="2000" height="800">
+							</figure>
+							<h3 class="intro__text js-parallax">
+								<span>
+								『CHUNITHM』<br class="spbr">
+								<span class="intro__text-sub">開発者インタビュー</span>
+								</span>
+							</h3>
+						</div>
+					</div>
+					<!-- /intro -->
+
+
+					<!-- member -->
+					<div class="member">
+						<div class="member__inner">
+							<h4 class="member__title">MEMBER PROFILE</h4>
+							<div class="member__items">
+								<div class="member__item">
+									<figure class="member__image">
+										<img src="images/member01.jpg" alt="" width="220" height="260">
+									</figure>
+									<div class="member__prof">
+										<h5>
+											<span class="member__job">ディレクター（D）</span>
+											<span class="member__name">小早川 賢</span>
+										</h5>
+										<p class="member__text">
+											2003年入社。「アヴァロンの鍵シリーズ」や「恐竜キングシリーズ」などにプランナーとして従事。その後、現在まで総合ディレクターとして「maimai」、「CHUNITHM」、「オンゲキ」などのアーケード音楽ゲームの企画立案からディレクション、プロモーションまで幅広く担当。
+										</p>
+									</div>
+								</div>
+								<div class="member__item">
+									<figure class="member__image">
+										<img src="images/member02.jpg" alt="" width="220" height="260">
+									</figure>
+									<div class="member__prof">
+										<h5>
+											<span class="member__job">デザイナー（De）</span>
+											<span class="member__name">佐藤 啓太</span>
+										</h5>
+										<p class="member__text">
+											2008年入社。「WCCF」でデザイナーとして赴任後に「コード・オブ・ジョーカー」でキャラクターデザイナー、UIデザイナー、世界観構築を担当。その後、「CHUNITHM」の立ち上げに合流し、デザインコンセプト作成やキャラクターデザインなどを担当。
+										</p>
+									</div>
+								</div>
+								<div class="member__item">
+									<figure class="member__image">
+										<img src="images/member03.jpg" alt="" width="220" height="260">
+									</figure>
+									<div class="member__prof">
+										<h5>
+											<span class="member__job">筺体デザイン（Pd）</span>
+											<span class="member__name">中村 達也</span>
+										</h5>
+										<p class="member__text">
+											2007年入社。「maimai」、「CHUNITHM」、「三国志大戦4」などの筺体デザインを担当。現在は筺体デザイン及び監修と新規企画の立ち上げに従事。
+										</p>
+									</div>
+								</div>
+								<div class="member__item">
+									<figure class="member__image">
+										<img src="images/member04.jpg" alt="" width="220" height="260">
+									</figure>
+									<div class="member__prof">
+										<h5>
+											<span class="member__job">サウンド（Snd）</span>
+											<span class="member__name">穴山 大輔</span>
+										</h5>
+										<p class="member__text">
+											2007年入社。キッズカードゲームやPS３「バイナリードメイン」、PS４「龍が如く維新！」などのサウンド制作に関わった後、「maimai」や「CHUNITHM」、「オンゲキ」のサウンド制作を担当。
+										</p>
+									</div>
+								</div>
+								<div class="member__item">
+									<figure class="member__image">
+										<img src="images/member05.jpg" alt="" width="220" height="260">
+									</figure>
+									<div class="member__prof">
+										<h5>
+											<span class="member__job">プログラマ（Pg）</span>
+											<span class="member__name">糟谷 将吾</span>
+										</h5>
+										<p class="member__text">
+											2007年入社。「maimai」シリーズ初期ではメインプログラマを担当。以降、「CHUNITHM」「オンゲキ」立ち上げ時のゲームパートを開発し、現在はゲキチュウマイチームの製作環境開発を担当。
+										</p>
+									</div>
+								</div>
+								<div class="member__item">
+									<figure class="member__image">
+										<img src="images/member06.jpg" alt="" width="220" height="260">
+									</figure>
+									<div class="member__prof">
+										<h5>
+											<span class="member__job">筺体システム設計（Sd）</span>
+											<span class="member__name">白川　康平</span>
+										</h5>
+										<p class="member__text">
+											2006年入社。入社後7年間は「WCCF シリーズのフラットカードリーダー」などの要素技術開発に携わり、その後はビデオゲーム筐体のシステム設計を担当。これまでに「FGO ベース筐体」、「WCCF FOOTISTA」の筐体システムの設計を担当。「CHUNITHM」は初めてシステム設計をした作品。
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /member -->
+
+					<!-- content -->
+					<div class="content">
+
+						<h3 class="content__title js-parallax">
+							音ゲー作りに大切なのは、熱意を言葉で表現すること
+						</h3>
+
+						<div class="content__columns">
+							<div class="content__column content__column-textmiddle">
+
+								<p class="content__text">
+									2015年7月16日稼働開始した「CHUNITHM」は、「maimai」制作チームが手掛けたアーケード音楽ゲーム。<br>
+									タッチスライダーという「なぞる」「タッチする」などの様々な動作を直感的に扱えるデバイスと、エアストリングスという手の上げ下げを認識する新感覚デバイスを搭載し、稼働から今日に至るまでコアプレイヤーからカジュアルプレイヤーまで幅広く支持を得ている。
+								</p>
+
+							</div>
+							<div class="content__column">
+
+								<figure class="content__image">
+									<img src="images/image01.jpg" alt="" width="1000" height="620">
+									<figcaption class="content__copyright">&copy;SEGA</figcaption>
+								</figure>
+								
+							</div>
+						</div>
+
+						<h4 class="question">「CHUNITHM」の企画立案のきっかけを教えてください。</h4>
+
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								「CHUNITHM」の前作「maimai」（同じくアーケード音楽ゲーム）を制作した際に、会社の方からもう１本、本格的な音楽ゲームを作れないかと要望が来たのがきっかけでした。また、「maimai」を制作している中で「こんな音楽ゲームを作ったほうがいいんじゃないか」というアイデアやモチベーションが私やスタッフの間で高まっていたこともあり、そういった内容を詰め込んで「CHUNITHM」の企画書を作成しました。
+							</p>
+						</div>
+
+						<h4 class="question">その後の基礎研工程で、「CHUNITHM」に取り入れられた新技術について教えてください。</h4>
+
+						<div class="answer">
+							<div class="answer__name">白川（Sd）</div>
+							<p class="content__text">
+								「CHUNITHM」ではグラウンドスライダーと呼ばれる盤面を手で滑らせる動作を認識するデバイスと、エアーストリングスと呼ばれる空間でのアクションを認識するデバイスを採用しています。エアーストリングスでは「CHUNITHM」から採用した新技術を取り入れています。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								社内では、定期的に筐体やハードウェアの開発チームが新技術を紹介するイベントが開催されるのですが「maimai」を作った直後に開催されたこのイベントで、新技術として「空間センサー」が紹介されており、この技術を使うことで、従来の音ゲーの「押す」という動作に加えて、手を「空中で動かす」アクションを取り入れた新しい音ゲーが作れると思い、新技術の実験を開始しました。最終的にはこのイベントで紹介された技術は使わなかったのですが、このイベントをヒントにしてエアーストリングスを開発しました。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">中村（Pd）</div>
+							<p class="content__text">
+								グラウンドスライダーについてはノーツの変化をデバイスで表現したいという要望があったので、それを実現するためにさまざまなアイデアを出しました。実際にタッチパネルの画面を置いてみるパターンやプロジェクターを使ってデバイスを投影する方法、物理的なボタンを使ってみるなど、さまざまなアイデアを出して検討しました。他にも、スライダーの面に凹凸をつけてみる実験など、プレイ感に関わる部分は試作も多く作りました。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								通常のアーケードゲームだと、どうしても筐体設計チームに「こういうゲームを作りたいので、それに合わせたデバイス・筐体デザインを作ってください」と要望を出すだけになりがちなのですが、音ゲーの場合は筐体やデバイス自体がゲームと密接に絡むことから、僕らのチームの場合は企画の草案段階から、筐体制作チームに入ってもらって一緒に作っています。
+							</p>
+						</div>
+
+						<div class="content__columns">
+							<div class="content__column">
+								<figure class="content__image">
+									<img src="images/image02.jpg" alt="" width="1000" height="480">
+								</figure>
+							</div>
+							<div class="content__column">
+								<figure class="content__image">
+									<img src="images/image03.jpg" alt="" width="1000" height="480">
+								</figure>
+							</div>
+						</div>
+
+						<h4 class="question">早い段階でチームを組むメリットはなんでしょうか？</h4>
+
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+							ゲームの制作工程から共有して作っていくので、ゲームに必要な要素をデバイスや筐体デザインのレベルで取り入れることができる点です。通常は会社の正式な承認が下りてから、筐体開発のメンバーが入ることが多いです。
+							</p>
+						</div>
+
+						<h4 class="question">「CHUNITHM」のプロジェクト化・実制作にあたって一番苦労したことはなんですか？</h4>
+
+						<div class="content__columns content__columns-reverse">
+							<div class="content__column">
+
+								<div class="answer">
+									<div class="answer__name">小早川（D）</div>
+									<p class="content__text">
+										さまざまな苦労はあったのですが、新技術であるエアーセンサーをゲームが遊べるレベルまで作りこむのには特に苦労しました。
+									</p>
+								</div>
+								<div class="answer">
+									<div class="answer__name">白川（Sd）</div>
+									<p class="content__text">
+										「CHUNITHM」は誰でも入りやすい音ゲーというのがコンセプトなので、いろいろな身長や体格の方が遊びやすい形でなければと。まずは研究機関の論文から基礎データを集めて検証項目を具体化することからスタートしました。それから、いろいろな身長や体格の方を集めて人間の動きの解析をして、最適値を導き出すところまで突き詰めましたね。
+									</p>
+								</div>
+
+							</div>
+							<div class="content__column">
+
+								<figure class="content__image">
+									<img src="images/image04.jpg" alt="" width="1000" height="480">
+								</figure>
+								
+							</div>
+						</div>
+
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								手を上げると一言に言っても、実は人によってさまざまな動作をしているんですよね。「CHUNITHM」では音楽に合わせて動く人間の自然な動き、気持ち良い動きを検知するようにしたかったのですが、その「気持ち良い動き」という曖昧なものを定義するのには苦労しました。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">白川（Sd）</div>
+							<p class="content__text">
+								手を上げる方向も振り幅も人によって変わるので、その中間点を探し続けました。言い換えると最適化です。結論としては、センサーは手首のあたりでとるようにしました。筐体デザインが斜めにプレイヤー側に傾いているのですが、それによって上手くとれるようになっています。
+							</p>
+						</div>
+
+						<h4 class="question">筐体デザインが特徴的ですよね。</h4>
+
+						<div class="answer">
+							<div class="answer__name">中村（Pd）</div>
+							<p class="content__text">
+								当時のチームメンバーの間ではATMなんて呼ばれたりもしました(笑)。デザインとしては、親しみやすいものにしたいというコンセプトがあったので、どうやったら心理的ハードルを下げられるかということが最初にありました。例えば、音ゲーって熟練者がプレイしているイメージがあるじゃないですか？すぐ隣で初心者がプレイするには心理的なハードルを感じてしまう場合もあると考えました。そういう理由で、上半身部分が囲われているようなデザインになっていたりします。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								前作の「maimai」が開放的なコンセプトで制作していたこともあって同じマーケットに出す新しい音ゲーは逆に、プレイヤーがプライベートの空間で楽しめるものにしたいと考えました。そのために囲いをするデザインにして欲しいとリクエストしたのですが、「没入感を担保しつつも多くのプレイヤーに入りやすいゲームにして欲しい」というやや矛盾したことをお願いしていたので、いろいろなデザインを出してもらいながら検討しました。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">中村（Pd）</div>
+							<p class="content__text">
+							人は耳のあたりまでが隠れているとプライベート空間として認識しやすいんです。プレイポジションに立った時に適度に上半身が隠れて、なおかつ左右のセンサーの位置的にも有利に働くのが、前傾のデザインだったんです。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								かなり特徴的なデザインではあるのですが、奇をてらって作ろうとしたわけではなく、機能を追求した結果のデザインなんですよね。アイキャッチにもなる非常に良いデザインになったと思います。
+							</p>
+						</div>
+
+						<h4 class="question">初心者がプレイするにあたり、心理的なハードルを低くするための工夫が他にもあったら教えてください。</h4>
+
+
+						<div class="content__columns">
+							<div class="content__column">
+
+							<div class="answer">
+								<div class="answer__name">佐藤（De）</div>
+								<p class="content__text">
+									プレイするにあたってのビジュアルも工夫しました。さまざまタイトルが入ってきても違和感がないように、ファンタジーやSFなどの特定の世界観を持たないデザインにしています。 オーディオみたいな機材のデザインにすると簡単に「音ゲー感」が出せて、従来の音ゲー好きなプレイヤーには喜ばれるのですが、新しい人は近づきにくいですよね。 そういったデザインを使わずに「音ゲー感」を出すのは難しかったです。
+								</p>
+							</div>
+
+							</div>
+							<div class="content__column">
+
+								<figure class="content__image">
+									<img src="images/image05.jpg" alt="" width="1000" height="480">
+								</figure>
+								
+							</div>
+						</div>
+
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								メインターゲットとして設定した、高校生から大学生くらいのプレイヤーが生まれてから体験してきたコンテンツや文化的な背景を調べ、それらを見える化しながらゲームや筐体のグラフィックのコンセプトを詰めていきました。好きだったものや慣れ親しんだものって、その後もずっと親しみが湧くものになるんですよね。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">佐藤（De）</div>
+							<p class="content__text">
+								今のターゲット層は、音楽はウォークマンじゃなくてiPodで聴いてきた子たちです。なので、それまで市場に出ていた音ゲーの筐体によくある、ラジカセや、DJ用の音響機材をモチーフとしたデザインは「古臭いよね」となってしまいます。今のターゲット層に合わせると、もっとシンプルな世界観になるだろうなと。
+							</p>
+						</div>
+
+						<h4 class="question">ターゲット層は高校生から大学生とのことでしたが、かなり幅広くプレイされているゲームですよね。</h4>
+
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								イマドキの若い子のターゲッティングがしっかりできたことに加えて、スタッフの中に長年音ゲーをプレイヤーとしてやってきた人間が多く、そういったコアなプレイヤーの心も同時に掴んだのが大きかったですね。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">佐藤（De）</div>
+							<p class="content__text">
+								ターゲット層についても、かなり明確なイメージを持っていましたよね。例えば、当時流行っていたニコニコ動画を好きな子たちでも、初期と中期と後期で分かれていて、それぞれの音楽を聴いていた子たちに向けて何を作ろうかとか。または、アニメを見ていた子たちに向けては何を作ろうかとか。ターゲットユーザーの像を多く揃えつつ、それぞれにしっかりとアプローチすることで、幅広くプレイされるゲームになったのではないかなと思います。
+							</p>
+						</div>
+
+						<h4 class="question">サウンドの制作では、この幅広さに頭を抱えそうですね。</h4>
+
+						<div class="content__columns content__columns-reverse">
+							<div class="content__column">
+
+								<div class="answer">
+									<div class="answer__name">穴山（Snd）</div>
+									<p class="content__text">
+										サウンド制作の人間って実はそこまで若い子の曲を聴いているわけではないので、ピンとこないものもありました(笑)。でも、ターゲットが詳細に資料化されていて、「このユーザーにはこの曲を当てたい」ということが明確に伝えられてきたので、どのような曲を作っていくか迷わずに進めました。
+									</p>
+								</div>
+
+							</div>
+							<div class="content__column">
+
+								<figure class="content__image">
+									<img src="images/image06.jpg" alt="" width="1000" height="480">
+								</figure>
+								
+							</div>
+						</div>
+
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								さまざまなジャンルの楽曲が入るゲームのサウンドということもあって、落とし所は難しかったと思うのですが、穴山の作るサウンドの違和感は全くありませんでした。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">穴山（Snd）</div>
+							<p class="content__text">
+								サウンドって見た目から受ける印象を加味して、補完する形で作ることが多いんです。今回はビジュアルイメージもシンプルだったので、あまり過剰に色付けしないようにデザインに寄り添ったサウンドを心がけました。
+							</p>
+						</div>
+
+						<h4 class="question">ロケーションテストで印象に残っていることを教えてください。</h4>
+
+						<div class="answer">
+							<div class="answer__name">中村（Pd）</div>
+							<p class="content__text">
+								ロケテ前に、まずは筐体の試作機を作り上げてソフトチームにお披露目します。そこからソフトが入った状態での検証がスタートします。持って行った直後から彼らがワサワサ集まって来て、筐体を起動させたら「すげー！！」ってすごく喜んでくれました。その時は何ヶ月分もの疲れが吹っ飛びましたね。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">白川（Sd）</div>
+							<p class="content__text">
+								入社して以来あの感覚は初めてでした。筐体とゲームが合体した時にはさらに盛り上がりました。あの熱狂を開発陣で共感した時、「ロケテも盛り上がるんじゃないか」と期待が高まりました。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">佐藤（De）</div>
+							<p class="content__text">
+								それまで鉄柱やスピーカーがむき出しの状態の筐体で制作していたので、デザイナーとしては完成品を目の前にするのはすごく嬉しいし、完成したことに安心しました。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">糟谷（Pg）</div>
+							<p class="content__text">
+								初めてのロケテストでは、早朝、開店前からお客さんが長蛇の列を作ってならんでいました。10時の開店時に配布を開始した整理券も10時半には配布数終了。それまでの音ゲーのロケテストでは、そこまで並ぶということはほとんどなかったんですよ。「CHUNITHM」が出て以降、僕らのやるロケテストはとても多くの人が並ぶものになってしまいました。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								ロケテに来るプレイヤー達が１プレイ目から「これは楽しい！やばい音ゲーが出て来た！」とショックを受けて帰る様子がすごく印象的でした。音ゲーのロケテの評判ってだいたい良くないのが常なんですよね。そういったそれまでの常識を変えるゲームになったと思います。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">中村（Pd）</div>
+							<p class="content__text">
+								スライダーをサーっと滑らせたら「気持ちいいじゃん！」みたいな。直感的に楽しさを感じてもらえたことが良かったと思います。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								「直感的」って言葉で言うのは簡単なんですけど、作るのはすごく大変。直感的に行き着くまでには、直感を阻害するあらゆるノイズを除去する努力が必要なんです。筐体のシステム設計、機構あるいはデザイン陣、ソフト陣、サウンド陣などの努力が結集して、1つの直感という言葉を作り出したのだと思います。それが「CHUNITHM」の強みであり特徴ですね。
+							</p>
+						</div>
+
+						<h4 class="question">稼働してからのことで印象に残っていることはありますか？</h4>
+
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								とにかく盛況だったというのが印象的でしたね。ロケテストでもないのに、1つの筐体に数十人が並ぶ現象が日本中で生まれて、その夏は人が多くてまともに遊べないゲームと言われていました。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">中村（Pd）</div>
+							<p class="content__text">
+								コンパクトに作ったので、あまり広くない店舗にも置かせてもらうことができたんですよ。ある店舗に10台「CHUNITHM」が並んでいて、その全部にお客さんが立っていたのは壮観でした。そう言った光景に直接立ち会えるのもアーケードゲーム制作ならではの魅力です。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">佐藤（De）</div>
+							<p class="content__text">
+								ゲームをやり続けたいと思うさまざまな仕掛けが、ユーザーに刺さったのかなと思います。初心者に優しい設計だったり、マップシステム、アニメ曲とのコラボなど、「CHUNITHM」に搭載されているシステムが、それ以降他の音ゲータイトルでも搭載されるようになったことも多々あります。
+							</p>
+						</div>
+
+						<h4 class="question">運営ではどういったところを意識して制作していますか？</h4>
+
+						<div class="answer">
+							<div class="answer__name">佐藤（De）</div>
+							<p class="content__text">
+								音ゲーは1年に１回必ずUIを全部変えます。実は、そのメジャーバージョンアップ時に、毎回ターゲットを１から練り直しているんです。慣れてきた人には新鮮な気持ちで楽しんでもらえるように、新しい人たちには興味を持ってもらえるように。その時代に合わせたコンテンツを目指しています。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								毎年新しいものを作り続けていく気概で、運営には取り組んでいます。運営の段階に入っても、０から１を作り続ける労力を傾けるのは大変ですが、運営側としても長くモチベーションを保ち続ける秘訣かもしれません。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">中村（Pd）</div>
+							<p class="content__text">
+								筐体設計では、最初から作る労力と比べたら少ないですが、メジャーアップデート時は新しい素材や印刷の手法にトライできるチャンスなので、積極的に提案しています。若手の成長にもつながりますしね。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">佐藤（De）</div>
+							<p class="content__text">
+								やってみたいことをやれるチャンスという点では、とてもやりがいのある運営ですね。最高のものを作りたいという想いが全員にあるので、必然的に夢中になってしまう環境は音ゲーチームの特徴だと思います。
+							</p>
+						</div>
+
+						<h4 class="question">「CHUNITHM」から生まれた女子高生バンド「イロドリミドリ」がさまざまなメディアミックスを展開していますね。</h4>
+
+						<div class="answer">
+							<div class="answer__name">佐藤（De）</div>
+							<p class="content__text">
+								「CHUNITHM」の1つのレーベルとして始めたものです。曲の感動曲線に、ストーリーもしっかりと作って絡めようというのが最初のコンセプトでした。もともと同人制作が趣味だったあるスタッフの情熱と趣味によって突き動かされています(笑)。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								作っている自分たちが本当に楽しいと思うものを作り出せば、その気持ちってユーザーにちゃんと伝わるんだと思います。僕も仕事柄いろんなライブに行くことがありますが、他と比べてもあれだけユーザーが熱狂的に参加して盛り上がるライブは他には無いんじゃないかなと思っています。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">佐藤（De）</div>
+							<p class="content__text">
+								基本的には音ゲーとしての曲作りをするんですが、ライブ時にユーザーがどのタイミングで掛け声を入れるかというのを考えて作られています。ユーザーが掛け声で参加して、初めてライブが完成されるという構成ですね。ライブ会場でアンケートをとって面白かったのが、「CHUNITHM」はもうやってないけど、イロドリミドリは追い続けています」という人が半分くらいいたことですね。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								こういったプレイヤー目線のコンテンツ作りというのは、うちのチームの特徴かもしれませんね。私の立場としては、こういった「スタッフ自身が良いと思ったもの」を積極的に実現できる環境はこれからも大事にしていきたいなと思っています。
+							</p>
+						</div>
+
+						<div class="content__columns">
+							<div class="content__column">
+								<figure class="content__image">
+									<img src="images/image07.jpg" alt="" width="1000" height="480">
+								</figure>
+							</div>
+							<div class="content__column">
+								<figure class="content__image">
+									<img src="images/image08.jpg" alt="" width="1000" height="480">
+								</figure>
+							</div>
+						</div>
+
+						<h4 class="question">新人の方でも活躍できる環境があるのでしょうか？</h4>
+
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								本来持っている経験値や実力いうのもありますが、最近入って来た新人にキャラクターのストーリーや楽曲のコンセプト作り、発注までやらせてみたりしました。面白いことを考えれば年齢も経験も関係ありません。「やってごらんよ」という雰囲気ですね。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">中村（Pd）</div>
+							<p class="content__text">
+								確かに一昔前の先輩後輩の関係とは違いますね。「これやれ、あれやれ」と指示することは全体的に少なくなっていて、代わりに「君は何やりたいの？」「これ得意そうだからこうしてみたらいいんじゃないの？」とアドバイスする方が多くなっています。もちろん、こういうデザインの方向性にするべきだということはあります。けれど、やっぱりその人らしい個性や色を入れないと魅力が出ないんですよ。個性やモチベーションを引き出せるフォローが、いかにできるかが大事になっていると思います。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">佐藤（De）</div>
+							<p class="content__text">
+								そもそも僕たちがターゲットとしている市場が若い世代向けなので、入って来た若い人たちが何を求めているのか、何が好きなのかを聞くのは当たり前のことだと思っています。自分たちはどんどん老いていくので、目線を積極的に合わせていかなければゲームも時代遅れのものになってしまいます。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								どんな活躍ができるかは、その人が持っている情熱やスキルによってさまざまだと思いますが、少なくとも何をしたいかを言葉にすることは必要です。むしろ、それ以外はいらないかもしれません。何をしたいかを言葉にしてくれれば、一緒に実現する方法を考えてくれる人間がそろっていますので。
+							</p>
+						</div>
+
+						<h4 class="question">最後に、音ゲー制作に一番大切なことはなんでしょうか？</h4>
+
+						<div class="answer">
+							<div class="answer__name">糟谷（Pg）</div>
+							<p class="content__text">
+								音ゲーは音楽に合わせてタイミングよくアクションするという非常に単純なゲームです。なので、プレイヤーとして遊んでいて、どこが楽しいかを表現することが結構難しいジャンルでもあります。起きている現象はそれだけですが、その裏には音楽が良かったり、いろんなアクションの組み合わせが良かったり、遊ぶ筐体の環境が良かったり、すごく多くの要因が集約されて音ゲーの面白さが構成されていますね。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								音ゲーを作る上で大切なことは、それらの要因をどこまで理解できるかだと思います。起きている現象にとらわれず、どれだけ幅広く面白さを構成しているものを理解し、考えて表現できるかが必要です。これができれば、再構築もできるし、分解もできるし、新しいものも作り出せます。そして忘れてはいけないのが、音ゲーはさまざまなポジションのメンバーが集まらないと作れないということ。そういったところまで最終的に理解することができれば、今後もいい音ゲーが世の中にたくさん生まれてくると思っています。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">佐藤（De）</div>
+							<p class="content__text">
+								ゲーム性も大事ですが、音ゲーをプレイする人や音ゲーを作る人、つまり人を理解することが一番大事ですね。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">白川（Sd）</div>
+							<p class="content__text">
+								この業界を志すには、技術力がまず必要だと考えている方は多いと思いますが、もっと重要なことは、セガでどんなことをしてどんな風に人を楽しませたいかという熱量です。これは絶対に必要ですね。
+							</p>
+						</div>
+						<div class="answer">
+							<div class="answer__name">小早川（D）</div>
+							<p class="content__text">
+								成長の機会や経験のチャンスを与えてくれる土壌がセガにはあります。「君は何ができる？」ではなく、「君は何をしたいか？」に耳を傾けてくれる会社に、私も成長させてもらって来ました。何をしたいかが具体的になっていない人でも、人を楽しませたいと思う情熱があれば、きっとあなたにしかできないことが見つかります。熱意を持った人が、「面白いゲームを作るぞ！」という気持ちになれる環境が僕らのチームにはあるので、ぜひいろんな方たちに来てもらいたいですね！
+							</p>
+						</div>
+
+						<figure class="content__image content__image-wide">
+							<img src="images/image-wide.jpg" alt="" width="2000" height="800">
+						</figure>
+
+
+												<!-- other -->
+						<div class="other js-parallax">
+
+							<div class="title js-parallax">
+								<p class="title__label title__label-small">
+									EPISODE
+								</p>
+								<h3 class="title__text">
+									ゲームができるまで
+								</h3>
+							</div>
+
+							<div class="other__items">
+								<div class="other__item">
+									<a href="../episode01/index.html">
+										<figure class="other__image">
+											<img src="../episode01/images/nav.jpg" alt="" width="1300" height="600">
+										</figure>
+										<p class="other__text">
+											<span>
+												『JUDGE EYES：死神の遺言』<br>
+												<span class="other__text-sub">事業部長×プロデューサーインタビュー</span>
+											</span>
+										</p>
+									</a>
+								</div>
+								<div class="other__item">
+									<a href="../episode02/index.html">
+										<figure class="other__image">
+											<img src="../episode02/images/nav.jpg" alt="" width="1300" height="600">
+										</figure>
+										<p class="other__text">
+											<span>
+												『新サクラ大戦』<br>
+												<span class="other__text-sub">開発者インタビュー</span>
+											</span>
+										</p>
+									</a>
+								</div>
+								<div class="other__item">
+									<a href="../episode03/index.html">
+										<figure class="other__image">
+											<img src="../episode03/images/nav.jpg" alt="" width="1300" height="600">
+										</figure>
+										<p class="other__text">
+											<span>
+												『サカつくRTW』<br>
+												<span class="other__text-sub">開発者インタビュー</span>
+											</span>
+										</p>
+									</a>
+								</div>
+								<div class="other__item">
+									<a href="index.html">
+										<figure class="other__image">
+											<img src="images/nav.jpg" alt="" width="1300" height="600">
+										</figure>
+										<p class="other__text">
+											<span>
+												『CHUNITHM』<br>
+												<span class="other__text-sub">開発者インタビュー</span>
+											</span>
+										</p>
+									</a>
+								</div>
+								<div class="other__item">
+									<a href="../episode05/index.html">
+										<figure class="other__image">
+											<img src="../episode05/images/nav.jpg" alt="" width="1300" height="600">
+										</figure>
+										<p class="other__text">
+											<span>
+												『プライズ』<br>
+												<span class="other__text-sub">開発者インタビュー</span>
+											</span>
+										</p>
+									</a>
+								</div>
+							</div>
+							
+						</div>
+						<!-- /other -->
+
+
+					</div>
+					<!-- /content -->
+
+
+
+				</section>
+				<!-- /contents -->
+
+
+			</div>
+		</main>
+		<!-- /main -->
+		
+
+		<!-- pageup -->
+		<div class="pageup js-pageup">
+			<div class="pageup__icon">
+				<img src="../../assets/images/pageup.svg" alt="" width="8" height="50">
+			</div>
+			<div class="pageup__base"></div>
+		</div>
+		<!-- /pageup -->
+
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footer__inner">
+				<div class="footer__main">
+
+					<div class="sitemap">
+						<div class="sitemap__inner">
+							<div class="sitemap__items">
+								<div class="sitemap__column">
+						
+									<div class="sitemap__item">
+										<a href="../../index.html">
+											<i>-</i>トップページ
+										</a>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../../event/index.html">
+											<i>-</i>イベント情報一覧
+										</a>
+									</div>
+								
+								</div>
+								<div class="sitemap__column">
+	
+									<div class="sitemap__category">
+										<span class="sitemap__label">COMPANY</span>
+										<span class="sitemap__name">会社紹介</span>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../../message/index.html">
+											<i>-</i>代表者メッセージ
+										</a>
+									</div>
+		
+									<div class="sitemap__item sitemap__item-blank">
+										<a href="../../../company/outline/index.html" target="_blank">
+											<i>-</i>会社概要
+										</a>
+									</div>
+		
+									<div class="sitemap__item sitemap__item-blank">
+										<a href="../../../company/services/index.html" target="_blank">
+											<i>-</i>事業内容
+										</a>
+									</div>
+
+								</div>
+							</div>
+							<div class="sitemap__items">
+								<div class="sitemap__column">
+
+									<div class="sitemap__category sitemap__category-first">
+										<span class="sitemap__label">ENVIRONMENT</span>
+										<span class="sitemap__name">働く環境</span>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../../welfare/index.html">
+											<i>-</i>多様な働き方/福利厚生
+										</a>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../../training/index.html">
+											<i>-</i>研修制度
+										</a>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../../communication/index.html">
+											<i>-</i>社員同士のコミュニケーション
+										</a>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../../office/index.html">
+											<i>-</i>大崎オフィス紹介
+										</a>
+									</div>
+
+								</div>
+								<div class="sitemap__column">
+
+									<div class="sitemap__category">
+										<span class="sitemap__label">INTERVIEW</span>
+										<span class="sitemap__name">社員紹介</span>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../../interview/index.html#senior">
+											<i>-</i>先輩社員インタビュー
+										</a>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../../interview/index.html#new">
+											<i>-</i>新入社員インタビュー
+										</a>
+									</div>
+
+								</div>
+							</div>
+							<div class="sitemap__items">
+								<div class="sitemap__column">
+
+									<div class="sitemap__category sitemap__category-first">
+										<span class="sitemap__label">EPISODE</span>
+										<span class="sitemap__name">ゲームができるまで</span>
+									</div>
+
+									<div class="sitemap__item">
+										<a href="../episode01/index.html">
+											<i>-</i>『JUDGE EYES：死神の遺言』
+										</a>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../episode02/index.html">
+											<i>-</i>『新サクラ大戦』
+										</a>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../episode03/index.html">
+											<i>-</i>『サカつくRTW』
+										</a>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="index.html">
+											<i>-</i>『CHUNITHM』
+										</a>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../episode05/index.html">
+											<i>-</i>『プライズ』
+										</a>
+									</div>
+
+								</div>
+								<div class="sitemap__column">
+
+									<div class="sitemap__category">
+										<span class="sitemap__label">RECRUIT</span>
+										<span class="sitemap__name">採用情報</span>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../../fresh/index.html">
+											<i>-</i>新卒採用
+										</a>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../../career/index.html">
+											<i>-</i>中途採用
+										</a>
+									</div>
+		
+									<div class="sitemap__item">
+										<a href="../../parttime/index.html">
+											<i>-</i>アルバイト採用
+										</a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					<div class="banner">
+						<div class="banner__item">
+							<a href="http://techblog.sega.jp/" target="_blank">
+								<img src="../../assets/images/banner-techblog-pc.jpg" alt="SEGA TECH Blog" width="280" height="83">
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="footer__side">
+
+					<div class="footer__logo">
+						<a href="../../../index.html">
+							<img src="../../assets/images/footer_logo.svg" alt="株式会社セガ -【SEGA Co., Ltd.】" width="68" height="34">
+						</a>
+					</div>
+					<div class="footer__title">
+						<a href="../../index.html">
+							<img src="../../assets/images/footer_title.svg" alt="採用サイト" width="80" height="12">
+						</a>
+					</div>
+					<div class="sns">
+						<div class="sns__item sns__item-facebook">
+							<a href="https://www.facebook.com/sega.jp" target="_blank">
+								Facebook
+							</a>
+						</div>
+						<div class="sns__item sns__item-twitter">
+							<a href="https://twitter.com/SEGA_OFFICIAL" target="_blank">
+								Twitter
+							</a>
+						</div>
+					</div>
+					<div class="footer__link">
+						<a href="../../../index.html" target="_blank">
+							コーポレートサイト
+						</a>
+					</div>
+
+				</div>
+				<div class="footer__copyright">
+					&copy;SEGA
+				</div>
+			</div>
+		</footer>
+		<!-- /header -->
+
+
+		<!-- loading -->
+		<div class="loading js-loading">
+			<div class="loading__bar">
+				<div class="loading__bar loading__bar-progress"></div>
+			</div>
+			<div class="loading__mask"></div>
+		</div>
+		<!-- /loading -->
+		
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<script src="../../assets/js/main.js"></script>
+		<script>
+
+			var debug = 0;
+
+			$(function() {
+			});
+
+		</script>
+		<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement":
+			[
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"item": {
+					"@id": "https://www.sega.co.jp/",
+					"name": "株式会社セガ -【SEGA Co., Ltd.】"
+				}
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"item": {
+					"@id": "https://www.sega.co.jp/recruit/",
+					"name": "採用サイト"
+				}
+			},
+			{
+				"@type": "ListItem",
+				"position": 3,
+				"item": {
+					"@id": "https://www.sega.co.jp/recruit/episode/episode04/",
+					"name": "『CHUNITHM』開発者インタビュー"
+				}
+			}
+			]
+		}
+		</script>
+	</body>
+</html>

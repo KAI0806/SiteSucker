@@ -1,0 +1,579 @@
+
+
+/* pc
+----------------------------------------------- */
+
+@media print, screen and (min-width:1000px) {
+
+
+	/* eventlist
+	----------------------------------------------- */
+	
+	.eventlist {
+		margin: 30px 0 0;
+	}
+	.eventlist__items {
+		border-bottom: 1px solid #d4d4d4;
+	}
+	.eventlist__item,
+	.eventlist__item:hover {
+		display: flex;
+		justify-content: space-between;
+		padding: 30px 0;
+		color: #282828;
+		text-decoration: none;
+		border-top: 1px solid #d4d4d4;
+	}
+	.eventlist__item:first-child {
+		border: none;
+	}
+	.eventlist__banner {
+		width: 240px;
+	}
+	.eventlist__summary {
+		width: 730px;
+	}
+	.eventlist__image img {
+		width: 100%;
+		height: auto;
+	}
+	.eventlist__tags {
+		padding: 5px 0 0;
+		font-size: 0;
+	}
+	.eventlist__tag {
+		display: inline-block;
+		margin: 5px 5px 0 0;
+		padding: 5px 6px 6px;
+		color: #0096fa;
+		font-size: 12px;
+		font-weight: 400;
+		text-align: center;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		line-height: 1;
+		background-color: #e5f4fe;
+	}
+	.eventlist__schedule {
+		display: flex;
+		align-items: center;
+		margin: 0 0 5px;
+		font-size: 0;
+	}
+	.eventlist__status {
+		display: inline-block;
+		margin: 0 10px 0 0;
+		padding: 5px 0;
+		min-width: 90px;
+		color: #535353;
+		font-size: 14px;
+		font-weight: 700;
+		text-align: center;
+		text-indent: 0.2em;
+		letter-spacing: 0.2em;
+		background: #e9e9e9;
+	}
+	.eventlist__date {
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.eventlist__title {
+		font-size: 20px;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		line-height: 30px;
+	}
+	.eventlist__text {
+		padding: 10px 0 0;
+		font-size: 16px;
+		font-weight: 400;
+		text-align: justify;
+		text-justify: inter-ideograph;
+		letter-spacing: 0.1em;
+		line-height: 27px;
+	}
+	.eventlist__report {
+		margin: 15px 0 0;
+	}
+	.eventlist__more {
+		margin: 20px 0 0;
+		color: #0096fa;
+		font-family: "Oswald";
+		font-size: 14px;
+		font-weight: 400;
+		text-align: right;
+	}
+	.eventlist__more:after {
+		display: inline-block;
+		content: "";
+		margin: 0 0 0 5px;
+		width: 10px;
+		height: 10px;
+		background: url("../images/ic_blank_blue.svg") no-repeat;
+		background-size: 10px;
+	}
+	
+	/* active */
+	
+	.eventlist__item-active {
+		background: #e5f4fe;
+	}
+	.eventlist__item-active .eventlist__banner {
+		margin: 0 0 0 40px;
+		width: 320px;
+	}
+	.eventlist__item-active .eventlist__summary {
+		margin: 0 40px 0 0;
+		width: 570px;
+	}
+	.eventlist__item-active .eventlist__tag {
+		background-color: #fff;
+	}
+	.eventlist__item-active .eventlist__status {
+		color: #fff;
+		background-color: #0096fa;
+	}
+	.eventlist__item-active .eventlist__title {
+		color: #0096fa;
+	}
+	
+	/* hover */
+	
+	.eventlist__item-active {
+		transition: background 0.25s;
+	}
+	.eventlist__item-active:hover {
+		background: #cceafe;
+	}
+
+	.eventlist__more {
+		opacity: 0;
+		transform: translateX(-5px);
+		transition-property: opacity, transform;
+		transition-duration: 0.25s;
+	}
+	.eventlist__item-active:hover .eventlist__more {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	
+	/* active-new */
+	
+	.eventlist-new .eventlist__item-active {
+		background: #f1fbd9;
+	}
+	.eventlist-new .eventlist__item-active .eventlist__tag {
+		color: #468c00;
+	}
+	
+	/* hover-new */
+
+	.eventlist-new .eventlist__item-active:hover {
+		background: #e7f9bf;
+	}
+	
+	
+	/* intro
+	----------------------------------------------- */
+
+	.intro {
+		position: relative;
+		margin: 100px 0 30px;
+		text-align: center;
+	}
+	.intro:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 60px);
+		background: #e5f4fe;
+	}
+	.intro__inner {
+		position: relative;
+		margin: auto;
+		padding: 0 0 30px;
+		width: 1000px;
+		z-index: 1;
+	}
+	.intro__image {
+		margin: auto;
+		width: 600px;
+	}
+	.intro__image img {
+		width: 100%;
+		height: auto;
+	}
+	.intro__date {
+		margin: 30px 0 0;
+		color: #0096fa;
+		font-size: 16px;
+		font-weight: 700;
+	}
+	.intro__text {
+		margin: 10px 0 0;
+		font-size: 24px;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		line-height: 34px;
+	}
+	
+
+	/* title
+	----------------------------------------------- */
+
+	.title {
+		position: relative;
+		margin: 100px 0 0;
+	}
+	.title:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 22px;
+		right: 50%;
+		margin: 0 225px 0 0;
+		width: 100vw;
+		height: 200px;
+		background: #e5f4fe;
+		transform: skewX(-30deg);
+	}
+	.title__inner {
+		position: relative;
+		margin: 0 auto 5px;
+		width: 1000px;
+		z-index: 1;
+	}
+	.title__no {
+		color: #0096fa;
+		font-family: "Oswald";
+		font-size: 40px;
+		font-weight: 400;
+	}
+	.title__text {
+		margin: 5px 0 0;
+		font-size: 24px;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		line-height: 30px;
+	}
+
+
+	/* session
+	----------------------------------------------- */
+
+	.session {
+		margin: 38px 0 15px;
+	}
+	.session__item {
+		display: flex;
+		align-items: center;
+		margin: 2px 0 0;
+		background: #e5f4fe;
+	}
+	.session__image {
+		width: 310px;
+	}
+	.session__image img {
+		width: 100%;
+		height: auto;
+	}
+	.session__summary {
+		width: 690px;
+	}
+	.session__text {
+		margin: 5px 30px 0;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		line-height: 26px;
+	}
+	.session__text-division {
+		margin: 0 30px;
+		color: #7e7e7e;
+		font-size: 14px;
+	}
+	.session__text-summary {
+		font-size: 14px;
+		font-weight: 400;
+	}
+	
+	
+	/* signature
+	----------------------------------------------- */
+
+	.signature {
+		margin: 100px 0 0;
+		padding: 25px 0;
+		color: #535353;
+		font-size: 14px;
+		text-align: right;
+		letter-spacing: 0.1em;
+		border-top: 1px solid #d4d4d4;
+	}
+
+
+}
+
+
+/* mobile
+----------------------------------------------- */
+
+@media only screen and (max-width:999px) {
+
+
+	/* eventlist
+	----------------------------------------------- */
+
+	.eventlist {
+		margin: 25px 20px 0;
+	}
+	.eventlist__items {
+		border-bottom: 1px solid #d4d4d4;
+	}
+	.eventlist__item,
+	.eventlist__item:hover {
+		display: block;
+		padding: 20px;
+		color: #282828;
+		text-decoration: none;
+		border-top: 1px solid #d4d4d4;
+	}
+	.eventlist__item:first-child {
+		border: none;
+	}
+	.eventlist__banner {
+	}
+	.eventlist__summary {
+		padding: 20px 0 0;
+	}
+	.eventlist__image img {
+		width: 100%;
+		height: auto;
+	}
+	.eventlist__tags {
+		padding: 5px 0 0;
+		font-size: 0;
+	}
+	.eventlist__tag {
+		display: inline-block;
+		margin: 5px 5px 0 0;
+		padding: 5px;
+		color: #0096fa;
+		font-size: 12px;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		line-height: 1;
+		background-color: #e5f4fe;
+	}
+	.eventlist__schedule {
+		display: flex;
+		align-items: center;
+		margin: 0 0 10px;
+		font-size: 0;
+	}
+	.eventlist__status {
+		display: inline-block;
+		min-width: 50px;
+		margin: 0 10px 0 0;
+		padding: 5px;
+		color: #535353;
+		font-size: 12px;
+		font-weight: bold;
+		text-align: center;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		background: #e9e9e9;
+	}
+	.eventlist__date {
+		font-size: 14px;
+	}
+	.eventlist__title {
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 20px;
+	}
+	.eventlist__text {
+		padding: 15px 0 0;
+		font-size: 14px;
+		text-align: justify;
+		line-height: 24px;
+	}
+	.eventlist__report {
+		margin: 10px 0 0;
+	}
+	.eventlist__more {
+		margin: 10px 0 0;
+		color: #0096fa;
+		font-family: "Oswald";
+		font-size: 14px;
+		font-weight: 400;
+		text-align: right;
+	}
+	.eventlist__more:after {
+		display: inline-block;
+		content: "";
+		margin: 0 0 0 5px;
+		width: 10px;
+		height: 10px;
+		background: url("../images/ic_blank_blue.svg") no-repeat;
+		background-size: 10px;
+	}
+	
+	/* active */
+	
+	.eventlist__item-active {
+		padding: 20px;
+		background: #e5f4fe;
+	}
+	.eventlist__item-active .eventlist__tag {
+		background-color: #fff;
+	}
+	.eventlist__item-active .eventlist__status {
+		color: #fff;
+		background-color: #0096fa;
+	}
+	.eventlist__item-active .eventlist__title {
+		color: #0096fa;
+	}
+	
+	/* active-new */
+	
+	.eventlist-new .eventlist__item-active {
+		background: #f1fbd9;
+	}
+	.eventlist-new .eventlist__item-active .eventlist__tag {
+		color: #468c00;
+	}
+
+
+	/* intro
+	----------------------------------------------- */
+
+	.intro {
+		position: relative;
+		margin: 30px 0 0;
+	}
+	.intro:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 30px;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 30px);
+		background: #e5f4fe;
+	}
+	.intro__inner {
+		position: relative;
+		margin: auto;
+		padding: 0 0 20px;
+		max-width: 640px;
+		z-index: 1;
+	}
+	.intro__image {
+		margin: 0 20px;
+	}
+	.intro__image img {
+		width: 100%;
+		height: auto;
+	}
+	.intro__date {
+		margin: 20px 20px 0;
+		color: #0096fa;
+		font-size: 12px;
+		font-weight: bold;
+	}
+	.intro__text {
+		margin: 10px 20px 0;
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	/* title
+	----------------------------------------------- */
+
+	.title {
+		position: relative;
+		margin: 30px 0 0;
+	}
+	.title:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 15px;
+		right: 50%;
+		width: 100vw;
+		height: 100px;
+		background: #e5f4fe;
+		transform: skewX(-15deg);
+	}
+	.title__inner {
+		position: relative;
+		margin: 0 20px;
+		z-index: 1;
+	}
+	.title__no {
+		color: #0096fa;
+		font-family: "Oswald";
+		font-size: 30px;
+		font-weight: 400;
+	}
+	.title__text {
+		margin: 10px 0 0;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 20px;
+	}
+
+
+	/* session
+	----------------------------------------------- */
+
+	.session {
+		margin: 28px 20px 10px;
+	}
+	.session__item {
+		margin: 2px 0 0;
+		padding: 20px;
+		background: #e5f4fe;
+	}
+	.session__image img {
+		width: 100%;
+		height: auto;
+	}
+	.session__summary {
+		padding: 10px 0 0;
+	}
+	.session__text {
+		margin: 5px 0 0;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 20px;
+	}
+	.session__text-division {
+		color: #7e7e7e;
+		font-size: 12px;
+	}
+	.session__text-summary {
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+
+	/* signature
+	----------------------------------------------- */
+
+	.signature {
+		margin: 30px 20px 0;
+		padding: 20px 0;
+		color: #535353;
+		font-size: 12px;
+		border-top: 1px solid #d4d4d4;
+	}
+
+
+}
+

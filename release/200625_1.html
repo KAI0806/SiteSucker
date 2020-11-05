@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta charset="utf-8">
+<title>セガとアシアル、アクションパズルゲーム『ぷよぷよ』のソースコードを活用したプログラミング学習教材を共同で提供開始｜株式会社セガ</title>
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="artcle">
+
+<meta property="og:title" content="株式会社セガ">
+<meta property="og:site_name" content="株式会社セガ">
+<meta property="og:url" content="https://www.sega.co.jp/">
+<meta property="og:image" content="../common/images/ogp_image.png">
+<meta property="og:description" content="株式会社セガのお知らせをご覧になれます。">
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="apple-touch-icon-precomposed" href="../common/images/apple-touch-icon.png">
+<link rel="shortcut icon" href="../common/images/favicon.ico">
+
+<!--[if lte IE 9]>
+<script>
+  location.href = 'http://sega-games.co.jp/unsupported.html';
+</script>
+<![endif]-->
+
+<link href="../common/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../common/css/base.css" rel="stylesheet" type="text/css">
+<link href="../common/css/nav.css" rel="stylesheet" type="text/css">
+<link href="../common/css/other.css" rel="stylesheet" type="text/css">
+<link href="../common/css/animate.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:500,700" media="only screen and (min-width:1000px)">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/local_release.css">
+<link rel="stylesheet" href="css/topics.css">
+
+<script type="text/javascript" src="../common/js/jquery.min.js"></script>
+<script type="text/javascript" src="../common/js/smoothscroll.js"></script>
+<script type="text/javascript" src="../common/js/jquery.inview.min.js"></script>
+<script type="text/javascript" src="../common/js/custom.js"></script>
+
+
+<script type="text/javascript" src="../common/js/changeFontSize.js"></script>	
+
+<script src="js/changeTableStyle.js"></script>
+<script src="js/facebookApi.js"></script>
+<script src="js/twitwidget.js"></script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N85KQCV');</script>
+<!-- End Google Tag Manager -->
+	
+</head>
+
+<body>
+	
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N85KQCV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	
+<div id="fb-root"></div>
+
+<div class="wrap">
+
+<div id="other_title-key">
+	
+<div id="key_img" class="release_00"></div>
+
+<div class="cover_01"></div>
+<div class="cover_02 animated box_fadeInRight"></div>
+<h2 class="title animated box_fadeIn">お知らせ</h2>
+
+<header id="top_header">
+<div class="inner">
+  <div class="logo_box">
+  <div class="logo animated box_fadeIn"><a href="../index.html"><img src="../common/images/logo-sega_w.svg" alt=""/></a><span>株式会社セガ</span></div>
+  <h1>株式会社セガ</h1>
+  </div>
+	
+  <nav class="g_nav">
+  <ul class="menu_li">
+    <li><a class="menu_category" href="../index.html"><i class="fas fa-home txt_b"></i> <span>トップ <i class="fas fa-chevron-right"></i></span></a></li>
+    <li><a class="menu_category" href="index.html"><i class="far fa-newspaper txt_b"></i> <span>お知らせ <i class="fas fa-chevron-right"></i></span></a>
+      <div class="mdd_wrap">
+        <div class="mdd_inner">
+		  <div class="mdd_content">
+			<h3>NEWS<span>お知らせ</span></h3>
+			<div class="menu_img"><img src="../common/images/menu_icon_news.png" width="275" height="145" alt=""/></div>
+		    <ul>
+              <li><a href="index.html">2020</a></li>
+			</ul>
+		    <ul class="etc_li">
+			  <li><a href="sega-games/index.html">株式会社セガゲームス</a></li>
+			  <li><a href="sega-interactive/index.html">株式会社セガ・インタラクティブ</a></li>
+			  <li><a href="https://sega-net.com/release/">株式会社セガネットワークス、旧セガネットワークスカンパニー</a></li>
+			</ul>
+		  </div>
+        </div>
+      </div>
+	</li>
+    <li><a class="menu_category" href="../company/index.html"><i class="far fa-building txt_b"></i> <span>会社情報 <i class="fas fa-chevron-right"></i></span></a>
+      <div class="mdd_wrap">
+        <div class="mdd_inner">
+		  <div class="mdd_content">
+			<h3>COMPANY<span>会社情報</span></h3>
+			<div class="menu_img"><img src="../common/images/menu_icon_company.png" width="275" height="145" alt=""/></div>
+            <ul>
+			  <li><a href="../company/outline/index.html">会社概要</a></li>
+			  <li><a href="../company/services/index.html">事業内容</a></li>
+			  <li><a href="../company/message/index.html">代表者メッセージ</a></li>
+			  <li><a href="../company/history/index.html">沿革</a></li>
+			  <li><a href="../company/access/index.html">アクセス</a></li>
+			</ul>
+		    <ul class="etc_li">
+			  <li class="img_link"><a href="https://sega.jp/" target="_blank"><img src="../common/images/link_productsite.jpg" width="345" height="110" alt="セガ製品情報サイト"/></a></li>
+			</ul>
+		  </div>
+        </div>
+      </div>
+    </li>
+    <li><a href="../recruit/index.html" target="_blank"><i class="fas fa-users txt_b"></i> <span>採用情報 <i class="fas fa-chevron-right"></i></span></a>
+      <div class="mdd_wrap">
+        <div class="mdd_inner">
+		  <div class="mdd_content">
+			<h3>RECRUIT<span>採用情報</span></h3>
+			<div class="menu_img"><img src="../common/images/menu_icon_recruit.png" width="275" height="145" alt=""/></div>
+            <ul>
+			  <li><a href="../recruit/fresh/index.html" target="_blank">新卒採用</a></li>
+			  <li><a href="../recruit/career/index.html" target="_blank">中途採用</a></li>
+			  <li><a href="../recruit/parttime/index.html" target="_blank">アルバイト採用</a></li>
+			</ul>
+		  </div>
+        </div>
+      </div>
+	</li>
+    <li><a class="menu_category" href="../ir/index.html"><i class="fas fa-chart-line txt_b"></i> <span>投資家情報 <i class="fas fa-chevron-right"></i></span></a>
+      <div class="mdd_wrap">
+        <div class="mdd_inner">
+		  <div class="mdd_content">
+			<h3>IR<span>投資家情報</span></h3>
+			<div class="menu_img"><img src="../common/images/menu_icon_ir.png" width="275" height="145" alt=""/></div>
+            <ul>
+			  <li><a href="https://www.segasammy.co.jp/japanese/ir/library/" target="_blank">投資家情報 <i class="fas fa-external-link-alt"></i></a></li>
+			  <li><a href="../ir/koukoku.html">電子公告</a></li>
+			</ul>
+		  </div>
+        </div>
+      </div>
+	</li>
+    <li><a class="menu_category" href="../contact/index.html"><i class="far fa-comment-dots txt_b"></i> <span>お問い合わせ <i class="fas fa-chevron-right"></i></span></a>
+      <div class="mdd_wrap">
+        <div class="mdd_inner">
+		  <div class="mdd_content">
+			<h3>CONTACT<span>お問い合わせ</span></h3>
+			<div class="menu_img"><img src="../common/images/menu_icon_inquiry.png" width="275" height="145" alt=""/></div>
+            <ul>
+			  <li>個人のお客様</li>
+			  <li><a href="https://sega.jp/contact/soft/" target="_blank">- PC・家庭用ゲーム事業 <i class="fas fa-external-link-alt"></i></a></li>
+			  <li><a href="https://sega.jp/contact/kt/" target="_blank">- スマホゲーム事業 <i class="fas fa-external-link-alt"></i></a></li>
+			  <li><a href="https://sega.jp/contact/arcade/" target="_blank">- アーケードゲーム事業 <i class="fas fa-external-link-alt"></i></a></li>
+	          <li><a href="https://sega.jp/contact/location2/" target="_blank">- マーチャンダイジング事業 <i class="fas fa-external-link-alt"></i></a></li>
+			</ul>
+		    <ul class="etc_li">
+			  <li>法人のお客様</li>
+			  <li><a href="https://sega.jp/business/" target="_blank">- 法人のお客様 <i class="fas fa-external-link-alt"></i></a></li>
+			</ul>
+		  </div>
+        </div>
+      </div>
+	</li>
+  </ul>
+  </nav>
+	
+  <nav class="h_nav">
+  <ul class="menu_li">
+    <li><a href="../index.html"><i class="fas fa-home txt_b"></i> <span>トップ <i class="fas fa-chevron-right"></i></span></a></li>
+    <li><a href="index.html"><i class="far fa-newspaper txt_b"></i> <span>お知らせ <i class="fas fa-chevron-right"></i></span></a></li>
+    <li><a href="../company/index.html"><i class="far fa-building txt_b"></i> <span>会社情報 <i class="fas fa-chevron-right"></i></span></a></li>
+    <li><a href="../recruit/index.html" target="_blank"><i class="fas fa-users txt_b"></i> <span>採用情報 <i class="fas fa-chevron-right"></i></span></a></li>
+    <li><a href="../ir/index.html"><i class="fas fa-chart-line txt_b"></i> <span>投資家情報 <i class="fas fa-chevron-right"></i></span></a></li>
+    <li><a href="../contact/index.html"><i class="far fa-comment-dots txt_b"></i> <span>お問い合わせ <i class="fas fa-chevron-right"></i></span></a></li>
+  </ul>
+  </nav>
+	
+      <div class="nav_box">
+      <div class="header_nav">
+          <span class="nav_line nav_line1"></span>
+          <span class="nav_line nav_line2"></span>
+          <span class="nav_line nav_line3"></span>
+      </div>
+      </div>
+	
+    <main class="l_main">
+      <div class="main_cover"></div>
+    </main>
+	
+  </div>
+</header>
+
+</div>
+	
+	<div class="breadcrumbsWrap">
+		<div class="container">
+			<a href="../index.html" class="text link"><i class="fa fa-home fa-1.5x"></i></a>&gt;
+			<a href="index.html" class="text link">お知らせ</a>&gt;
+			<a href="index-year=2020.html" class="text link">2020年のお知らせ</a><!--&gt;
+			<span class="text">記事</span>-->
+		</div>
+	</div>
+	
+<div class="content_left">
+<div class="cover_01"></div>
+<div class="cover_02 animated box_fadeInLeft"></div>
+<div class="content_box">
+<h3><span class="year">2020年</span> お知らせ</h3>
+</div>
+</div>
+
+	<main>
+		<div class="container">
+
+			<section class="articleArea newsArea">
+
+				<section class="entryArea">
+				  <h3 class="title">セガとアシアル、アクションパズルゲーム『ぷよぷよ』のソースコードを活用したプログラミング学習教材を共同で提供開始</h3>
+				  <div class="articleItems cf">
+						<div class="leftArea">
+						  <p class="date item">
+						    <time datetime="2020-06-25">2020年06月25日</time>
+					      </p>
+						  <p class="category cate02 item">製品・サービス</p>
+						</div>
+						<div class="rightArea">
+							<div class="fb-like item" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+							<div class="twitter item"><a href="https://twitter.com/share" data-url="https://www.sega.co.jp/release/200625_1.html" class="twitter-share-button" data-text="セガとアシアル、アクションパズルゲーム『ぷよぷよ』のソースコードを活用したプログラミング学習教材を共同で提供開始" data-lang="ja">ツイート</a></div>
+						</div>
+					</div>
+
+					<div class="entryBodyWrap">
+						
+						
+
+<div class="topicsBox">
+	
+<p>株式会社セガとアシアル株式会社は、アシアルが提供するプログラミング学習環境『Monaca Education』において、セガが展開するアクションパズルゲーム『ぷよぷよ』のソースコードを使ってプログラミングを学習できる教材コンテンツ『ぷよぷよプログラミング』の提供を2020年6月26日(金)に開始いたします。<br>
+なお、本コンテンツは無料でご利用いただくことができます。</p>
+	
+<p class="mtBig">『Monaca Education』は、HTML5やJavaScriptといったWeb標準言語でスマートフォンアプリを作りながらプログラミングを学び、生活や社会の問題解決をする力を養うことができるプログラミング学習環境です。特別なソフトウェアのインストールは不要であり、ブラウザを用いてクラウド環境でプログラミング学習を進めていくことが可能です。<br>
+中学校、高等学校、専門学校、大学など800以上の教育機関におけるプログラミング教育に利用されており、課題研究やコンテストでの実績も多数あります。</p>
+	
+<div class="image1-box mtMini">
+<figure><a href="http://puyo.sega.jp/program_2020/" target="_blank"><img src="images/200625_1/img_01.jpg" alt="ぷよぷよプログラミング"></a>
+<figcaption></figcaption>
+</figure>
+</div>
+	
+<p>このたび提供する教材コンテンツでは、HTML5やJavaScriptで記述されたソースコードを書き写す作業（写経）を通して、実際に『ぷよぷよ』のプレイ画面を確認しながらコーディングを行います。プログラミング初心者にとって書き写し（写経）は、コーディングに慣れる、間違いを自分で発見し修正する能力が身につく、そして完成させたという自信につながります。完成後は背景の「ぷよ」の色を変えたり、「ぷよ」の置ける数を増やすなど簡単な設定の変更など改編も可能です。<br>
+初級コースから中級・上級コースまでの難易度を用意しており、幅広い学習層に対してご活用いただけます。また、クラウド環境でOSに依存しないため、インターネット環境があれば自宅や教育機関、公共施設が保有する既存PCによる学習や指導が可能になっています。世界中で利用されるプログラミング言語を使い、エンジニアも開発を行う環境でプログラミング学習を行うことができます。</p>
+	
+<div class="image4-box mtMini">
+<figure><img src="images/200625_1/img_02.jpg" alt="ぷよぷよプログラミング 画面１">
+<figcaption></figcaption>
+</figure>
+<figure><img src="images/200625_1/img_03.jpg" alt="ぷよぷよプログラミング 画面２">
+<figcaption></figcaption>
+</figure>
+<figure><img src="images/200625_1/img_04.jpg" alt="ぷよぷよプログラミング 画面３">
+<figcaption></figcaption>
+</figure>
+<figure><img src="images/200625_1/img_05.jpg" alt="ぷよぷよプログラミング 画面４">
+<figcaption></figcaption>
+</figure>
+</div>
+	
+<div class="image1-box mtMini">
+<figure><img src="images/200625_1/img_06.jpg" alt="ぷよぷよプログラミング ロゴ">
+<figcaption></figcaption>
+</figure>
+</div>
+
+<div class="column-box">
+<h3>■『ぷよぷよプログラミング』の利用について</h3>
+<dl class="basic">
+    <dt>■関連サイト：</dt>
+    <dd>▶<a href="http://puyo.sega.jp/program_2020/" target="_blank">公式サイト</a></dd>
+    <dt>■推奨環境について：</dt>
+    <dd>対応OS：Windows, Mac, Google Chrome, タブレット（iOS, Android）<br>
+		推奨ブラウザ：Google Chrome</dd>
+</dl>
+</div>
+
+<p>今回の取り組みでは、セガはコンテンツの企画制作と教育現場への支援を行い、アシアルでは『Monaca Education』への実装を含めサービスの運用などを担当します。プログラミングに精通した指導者がいなくても授業が実現できるように、本コンテンツを通じて小学校、中学校、高等学校、大学でのプログラミング教育を支援していきます。また、セガが開催するeスポーツ大会での訴求も行っていきます。</p>
+	
+<hr class="topics-hr">
+	
+<div class="column-box">
+<h3>『ぷよぷよ』について</h3>
+<p>『ぷよぷよ』は、1991年に家庭用ゲーム機向けタイトルとして発売以来、四半世紀を超えて愛される国民的落ち物アクションパズルゲームです。落ちてくる同じ色の「ぷよ」をくっつけて消すという単純で分かりやすいゲームシステム、可愛らしいキャラクター、さらに落ち物アクションパズルゲームとして初めて対戦形式を導入したゲーム性によって人気を博し、シリーズ作品は家庭用ゲーム機、アーケード機、スマートフォン向けアプリなどさまざまなプラットフォームに展開されています。<br>
+また、2018年にはJeSU（日本eスポーツ連合）ライセンス認定タイトルとなり、eスポーツのプロゲーマーも誕生。これまで多数の競技大会を実施してきました。また、「燃ゆる感動かごしま国体（第75回国民体育大会）」の文化プログラム「全国都道府県対抗eスポーツ選手権2020 KAGOSHIMA」の採用タイトルにもなっています。</p>
+</div>
+	
+<div class="column-box">
+<h3>セガについて</h3>
+<p>株式会社セガでは家庭用ゲーム機、PC、スマートフォン向けゲームの企画・開発・販売・運営及びアーケード機器の企画・開発・販売を軸に事業を展開するほか、ゲーム事業で培ったノウハウを生かしたデジタルサービスやプライズをはじめとしたキャラクター商品の企画・開発・販売等を行っています。<br>
+家庭用ゲーム機、PC、スマートフォン向けゲーム事業においては、日本国内、及び海外のスタジオにて開発したゲームコンテンツを、日本を始め世界各地に置く拠点を通して全世界にご提供しています。また、アーケードゲーム事業においてはプライズマシン、メダルゲームなど革新的な発想力とそれを具現化する高い開発力により時代を象徴する画期的な製品を多数生み出してきました。</p>
+<dl class="basic">
+    <dt>■関連サイト：</dt>
+    <dd>▶<a href="../index.html" target="_blank">公式サイト</a></dd>
+</dl>
+</div>
+	
+<div class="column-box">
+<h3>アシアルについて</h3>
+<p>アシアル株式会社は『アジア』発の『リーダー』という社名の元、2002年の創業以来一貫してWeb技術の普及・発展に努めています。企業向けにWebシステム開発、コンサルティング、UI/UX設計、技術トレーニングなど各種サービスを提供しています。また、モバイルアプリ開発クラウド『Monaca』など開発ツールを国内外のエンジニア向けに提供しています。<br>
+さらに『Apache Cordova』など世界的なOSSプロジェクトへの貢献活動にも力を入れています。本年1月には「アシアル情報教育研究所」を設立し、「プログラミングをもっと身近なものに」をミッションとし、誰でも日常にイノベーションを起こせる未来をつくるために、様々なプログラミング教育支援事業を行っております。</p>
+<dl class="basic">
+    <dt>■関連サイト：</dt>
+    <dd>▶<a href="https://asial.co.jp/" target="_blank">公式サイト</a></dd>
+</dl>
+</div>
+	
+
+
+<div class="text-box">
+<!--<ul class="supplemental-list">-->
+<ul class="supplemental-list">
+<li><i>■</i>　記載されている会社名、製品名は、各社の登録商標または商標です。</li></ul>
+</div>
+
+</div><!--.topicbox-->
+
+</div><!--.entryBodyWrap-->
+
+				
+				
+					<div class="toBackLinkWrap bottom"><img src="../common/images/arrow.svg" class="arrow"><a href="index-year=2020.html" class="toBackLink">お知らせ 2020年 一覧へ</a></div>
+
+				</section>
+			</section>
+		</div><!-- /.container -->
+	</main>
+
+<div id="gototop"><a href="200625_1.html#wrap">
+	<img src="../common/images/gototop.png" width="12" height="15" alt=""/>
+	<p>PAGE TOP</p></a>
+</div>
+
+<footer>
+  <div id="footer_box">
+	<div class="footer_content">
+	  <div class="sitemap">
+	  <ul class="sitemap_li">
+		<li class="sitemap_title"><a href="../index.html">TOP <span>トップ</span></a></li>
+		<li class="sitemap_title"><a href="index.html">NEWS <span>お知らせ</span></a></li>
+		<li><a href="index.html">2020</a></li>
+		<li><a href="sega-games/index.html">株式会社セガゲームス</a></li>
+		<li><a href="sega-interactive/index.html">株式会社セガ・インタラクティブ</a></li>
+		<li><a href="https://sega-net.com/release/">株式会社セガネットワークス、旧セガネットワークスカンパニー</a></li>
+	  </ul>
+	  <ul class="sitemap_li">
+		<li class="sitemap_title"><a href="../company/index.html">COMPANY <span>会社情報</span></a></li>
+		<li><a href="../company/outline/index.html">会社概要</a></li>
+		<li><a href="../company/services/index.html">事業内容</a></li>
+		<li><a href="../company/message/index.html">トップメッセージ</a></li>
+		<li><a href="../company/history/index.html">沿革</a></li>
+		<li class="last"><a href="../company/access/index.html">アクセス</a></li>
+		<li class="sitemap_title"><a href="../recruit/index.html" target="_blank">RECRUIT <span>採用情報</span></a></li>
+		<li><a href="../recruit/fresh/index.html" target="_blank">新卒採用</a></li>
+		<li><a href="../recruit/career/index.html" target="_blank">中途採用</a></li>
+		<li><a href="../recruit/parttime/index.html" target="_blank">アルバイト採用</a></li>
+	  </ul>
+	  <ul class="sitemap_li">
+		<li class="sitemap_title"><a href="../ir/index.html">IR <span>投資家情報</span></a></li>
+		<li><a href="https://www.segasammy.co.jp/japanese/ir/library/" target="_blank">投資家情報 <i class="fas fa-external-link-alt"></i></a></li>
+		<li class="last"><a href="../ir/koukoku.html">電子公告</a></li>
+		<li class="sitemap_title"><a href="../contact/index.html">CONTACT <span>お問い合わせ</span></a></li>
+		<li>個人のお客様</li>
+		<li><a href="https://sega.jp/contact/soft/" target="_blank">- PC・家庭用ゲーム事業 <i class="fas fa-external-link-alt"></i></a></li>
+		<li><a href="https://sega.jp/contact/kt/" target="_blank">- スマホゲーム事業 <i class="fas fa-external-link-alt"></i></a></li>
+		<li><a href="https://sega.jp/contact/arcade/" target="_blank">- アーケードゲーム事業 <i class="fas fa-external-link-alt"></i></a></li>
+		<li><a href="https://sega.jp/contact/location2/" target="_blank">- マーチャンダイジング事業 <i class="fas fa-external-link-alt"></i></a></li>
+		<li>法人のお客様</li>
+		<li><a href="https://sega.jp/business/" target="_blank">- 法人のお客様 <i class="fas fa-external-link-alt"></i></a></li>
+	  </ul>
+	  </div>
+	  <div class="link">
+		<ul>
+		  <li><a href="https://sega.jp/" target="_blank"><img src="../common/images/link_productsite.jpg" width="345" height="110" alt=""/></a></li>
+		  <li><a href="https://sega-group.co.jp/" target="_blank"><img src="../common/images/link_segagroup.jpg" width="345" height="110" alt=""/></a></li>
+		</ul>
+		<div class="privacypolicy">▶ <a href="https://sega-group.co.jp/privacypolicy/" target="_blank">プライバシーポリシー</a></div>
+	  </div>
+	</div>
+	  
+	<div class="logo-copy">
+	  <ul>
+		<li><a href="https://sega-group.co.jp/" target="_blank"><img src="../common/images/segagroup_logo.svg" alt=""/></a></li>
+		<li><a href="https://www.segasammy.co.jp/" target="_blank"><img src="../common/images/segasammy_logo.svg" alt=""/></a></li>
+	  </ul>
+	  <p>&copy;SEGA</p>
+	</div>
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>

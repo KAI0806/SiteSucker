@@ -1,0 +1,734 @@
+@charset "utf-8";
+
+/*** トピックスは必ずこのdivで囲む ***/
+div.topicsBox {
+	margin: 0 0 4em;
+	font-size: 14px;
+	line-height: 2.0;
+}
+
+/*** リンク ***/
+div.topicsBox a:link,
+div.topicsBox a:visited {
+	text-decoration: underline;
+	color: #013763;
+	transition: all 0.3s ease;
+}
+
+div.topicsBox a:hover {
+	text-decoration: none;
+    color: #548ab6;
+}
+
+/*** 下マージン調整 大 ***/
+div.topicsBox .mtBig {
+	margin-top: 4em !important;
+}
+
+/*** 下マージン調整 小 ***/
+div.topicsBox .mtMini {
+	margin-top: 2em !important;
+}
+
+/*** hr ***/
+div.topicsBox hr.topics-hr {
+	margin: 5em 0;
+	clear: both;
+	border: 1px solid #e3e3e3;
+	border-bottom: none;
+	border-right: none;
+	border-left: none;
+}
+
+/*** h3 ～ h5 調整 ***/
+div.topicsBox h3,div.topicsBox h4,div.topicsBox h5 {
+	margin: 1.0em 0 20px 0;/*170915 edited by S*/
+	color: #013763;
+}
+
+div.topicsBox h3 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+div.topicsBox h3.border {
+	border-bottom: 1px solid #003650;
+}
+
+div.topicsBox h3.center,div.topicsBox h4.center,div.topicsBox h5.center {
+	text-align: center;
+}
+
+div.topicsBox h3.red {
+	color: #BF0F12;
+}
+
+div.topicsBox h3.red.border {
+	color: #BF0F12;
+	border-bottom: 1px solid #BF0F12;
+}
+
+
+span.subtitle {
+	font-size: 70%;
+	display: block;
+	margin-top: 10px;
+}
+
+div.topicsBox h4 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+div.topicsBox h5 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/*** p　メイン ***/
+div.topicsBox p {
+	margin: 1.0em 0 20px 0;/*170915 edited by S*/
+}
+
+div.topicsBox p.text-center {
+	text-align: center;
+}
+
+div.topicsBox p.text-left {
+	text-align: left;
+}
+
+div.topicsBox p.text-right {
+	text-align: right;
+}
+
+div.topicsBox p.topics-small {
+	font-size: 12px;
+}
+
+/*** リスト 基本 ***/
+div.topicsBox ul.basic,div.topicsBox ol.basic {
+	margin: 1.0em 0 20px 0;/*170915 edited by S*/
+	padding-left: 25px;
+}
+
+div.topicsBox ul.basic li,div.topicsBox ol.basic li,div.topicsBox dl.basic dt,div.topicsBox dl.basic dd {
+	margin-top: 0.3em;
+}
+
+div.topicsBox ul.basic li:first-child,div.topicsBox ol.basic li:first-child,div.topicsBox dl.basic dt:first-child,div.topicsBox dl.basic dd:nth-child(2) {
+	margin-top: 0;
+}
+
+div.topicsBox dl.basic {
+	margin: 1.0em 0 20px 0;/*170915 edited by S*/
+	overflow: hidden;
+}
+
+div.topicsBox ul.basic li {
+	list-style: disc;
+}
+
+div.topicsBox ol.basic li {
+	list-style: decimal;
+}
+
+div.topicsBox dl.basic dt {
+	clear: both;
+    float: left;
+    width: 25%;
+    padding: 0;
+}
+
+div.topicsBox dl.basic dd {
+	float: left;
+    width: 74%;
+    margin-left: 0;
+    padding: 0;
+}
+
+div.topicsBox .disk li {
+	list-style: disc;
+	padding-left: 20px;
+}
+
+div.topicsBox ul.supplemental-list {
+	margin: 1.0em 0 20px 0;/*170915 edited by S*/
+	font-size: 12px;
+	padding-left: 0;
+}
+
+div.topicsBox ul.supplemental-list.disk {
+	padding-left: 20px;
+}
+
+div.topicsBox ul.supplemental-list li {
+	margin: 0;
+	position: relative;
+}
+
+div.topicsBox ul.supplemental-list li i {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+div.topicsBox ul.supplemental-list li {
+	padding-left: 14px;
+}
+
+div.topicsBox ul.supplemental-list.disk > li {
+	padding-left: 0;
+}
+
+/*** 画像配置 ***/
+div.topicsBox div.image1-box,div.topicsBox div.image2-box,div.topicsBox div.image3-box,div.topicsBox div.image4-box,div.topicsBox div.image5-box {
+	margin: 1em 0 20px 0;/*170915 edited by S*/
+	overflow: hidden;
+    text-align: center;
+}
+
+div.topicsBox div.image1-box figure,div.topicsBox div.image2-box figure,div.topicsBox div.image3-box figure,div.topicsBox div.image4-box figure,div.topicsBox div.image5-box figure {
+	margin: 0.5em 0 20px 0;/*170915 edited by S*/
+}
+
+div.topicsBox div.image2-box figure {
+	padding: 0;
+	margin-right: 1%;
+	width: 49.5%;
+}
+
+div.topicsBox div.image2-box figure,div.topicsBox div.image3-box figure,div.topicsBox div.image4-box figure,div.topicsBox div.image5-box figure {
+	float: left;
+}
+
+div.topicsBox div.image2-box figure:nth-child(2n),div.topicsBox div.image3-box figure:nth-child(3n),div.topicsBox div.image4-box figure:nth-child(4n),div.topicsBox div.image5-box figure:nth-child(5n) {
+	margin-right: 0;
+}
+
+div.topicsBox div.image3-box figure {
+	padding: 0;
+	margin-right: 1%;
+	width: 32.666666666%;
+}
+
+div.topicsBox div.image4-box figure {
+	padding: 0;
+	margin-right: 1%;
+	width: 24.25%;
+}
+
+div.topicsBox div.image5-box figure {
+	width: 19.2%;
+    display: block;
+    float: left;
+	margin-right: 1%;
+}
+
+div.topicsBox div.image2-box figure img,div.topicsBox div.image3-box figure img,div.topicsBox div.image4-box figure img,div.topicsBox div.image5-box figure img {
+	margin: 0;
+}
+div.topicsBox div.image1-box figure img,div.topicsBox div.image2-box figure img,div.topicsBox div.image3-box figure img,div.topicsBox div.image4-box figure img,div.topicsBox div.image5-box figure img {
+	width: auto;
+	max-width: 100% !important;
+}
+
+div.topicsBox figcaption {
+	font-size: 12px;
+	margin: 0 0.5em;
+	line-height: 2.0;
+}
+
+/*** ボックス ***/
+div.topicsBox .column-box {
+	margin: 1em 0 20px 0;/*170915 edited by S*/
+	padding: 1px 20px 1em 20px;
+	width: 100%;
+	background: #c3d6e6;
+	box-sizing: border-box;
+}
+
+div.topicsBox .box.column2 {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+div.topicsBox .box.column2 .box-left {
+	float: left;
+	width: 49%;
+	margin-right: 2%;
+}
+
+div.topicsBox .box.column2 .box-right {
+	width: 49%;
+	float: right;
+}
+
+div.topicsBox .box.column2 .box-right {
+	margin-right: 0;
+}
+
+div.topicsBox .box.column2 .box-left.color,div.topicsBox .box.column2 .box-right.color {
+	margin-top: 1em;
+	padding: 0 20px 1em 20px;
+	background: #c3d6e6;
+	box-sizing: border-box;
+}
+
+/*** テーブル ***/
+div.topicsBox table.basic {
+	margin: 1em 0 20px 0;/*170915 edited by S*/
+	width: 100%;
+	box-sizing: border-box;
+	xfont-size: 14px;
+	line-height: 1.7;
+}
+
+div.topicsBox table.basic th {
+	background: #548ab6;
+	color: #FFF;
+}
+
+div.topicsBox table.basic th,div.topicsBox table.basic td {
+	border: solid 1px #013763;
+	padding: 5px;
+	xword-break: break-all;
+}
+
+div.topicsBox .scroll-table {
+	overflow: hidden;
+    white-space: normal;
+}
+
+/* 画像とテキストの回り込み */
+div.topicsBox .text-image-box {
+	margin: 1em 0 20px 0;/*170915 edited by S*/
+	overflow: hidden;
+}
+
+div.topicsBox .text-image-box figure {
+	width: inherit;
+	max-width: 470px;
+	margin: 0 0 20px 1em;/*170915 edited by S*/
+	text-align: right;
+	float: right;
+}
+
+div.topicsBox .text-image-box figcaption {
+	margin: 0 !important;
+}
+
+div.topicsBox .text-image-box figure figcaption {
+	display: block;
+	font-size: 12px;
+	text-align: center;
+}
+
+div.topicsBox .text-image-box figure img {
+	max-width: 470px;
+}
+
+div.topicsBox div.text-image-box h3:first-child,div.topicsBox div.text-image-box h4:first-child,div.topicsBox div.text-image-box h5:first-child,div.topicsBox div.text-image-box ul:first-child,div.topicsBox div.text-image-box ol:first-child,div.topicsBox div.text-image-box dl:first-child,div.topicsBox div.text-image-box p:first-child {
+	margin-top: 0 !important;
+}
+
+/* 画像とテキストの回り込み-left  */
+div.topicsBox .text-image-box-left {
+	margin: 1em 0 20px 0;/*170915 edited by S*/
+	overflow: hidden;
+}
+
+div.topicsBox .text-image-box-left figure {
+	width: inherit;
+	max-width: 470px;
+	margin: 0 1em 20px 0;/*170915 edited by S*/
+	text-align: left;
+	float: left;
+}
+
+div.topicsBox .text-image-box-left figcaption {
+	margin: 0 !important;
+}
+
+div.topicsBox .text-image-box-left figure figcaption {
+	display: block;
+	font-size: 12px;
+	text-align: center;
+}
+
+div.topicsBox .text-image-box-left figure img {
+	max-width: 470px;
+}
+
+div.topicsBox div.text-image-box-left h3:first-child,div.topicsBox div.text-image-box-left h4:first-child,div.topicsBox div.text-image-box-left h5:first-child,div.topicsBox div.text-image-box-left ul:first-child,div.topicsBox div.text-image-box-left ol:first-child,div.topicsBox div.text-image-box-left dl:first-child,div.topicsBox div.text-image-box-left p:first-child {
+	margin-top: 0 !important;
+}
+
+/*** 動画 ***/
+div.topicsBox .movie-box {
+	margin: 1em 0 20px 0;/*170915 edited by S*/
+}
+
+div.topicsBox .movie-box .movie1 {
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+div.topicsBox .movie-box .video {
+    position: relative;
+    width: 100%;
+	padding-top: 56.25%;
+	box-sizing: border-box;
+	margin-top: 1em;
+}
+
+div.topicsBox .movie-box .video iframe {
+	position: absolute;
+    top: 0;
+    right: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+div.topicsBox .movie-box .caption {
+	margin: 0 0.5em;
+	padding: 0;
+	text-align: center;
+	font-size: 12px;
+	line-height: 1.6;
+}
+
+/*** リンクボタン ***/
+div.topicsBox a.button-block {
+	margin: 0;
+}
+div.topicsBox ul.links{
+	padding: 0 !important;	
+}
+div.topicsBox a.btn-base {
+	margin: 2em auto 0 auto;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	border: 3px solid #013763;
+	xborder-radius: 8px;
+	color: #013763;
+	font-weight: bold;
+	padding: 14px 10px;
+	transition: color .3s, background-color .3s;
+	font-size: 110%;
+	box-sizing: border-box;
+}
+
+div.topicsBox a.btn-base:hover {
+	background: #013763;
+	color: #FFF;
+	text-decoration: none;
+}
+
+div.topicsBox a.btn-base.small {
+	width: 300px;
+}
+
+div.topicsBox a.btn-base.normal {
+	width: 450px;
+}
+
+div.topicsBox a.btn-base.large {
+	width: 600px;
+}
+
+/*** セガ製品情報サイトのグレー枠 ***/
+
+div.topicsBox div.spec-box{/*added by S 170627*/
+	margin-top: 2em;
+}
+
+div.topicsBox div.smryBox {
+	margin-top: 1em;
+	width: 100%;
+	display: table;
+}
+
+div.topicsBox div.smryBox > div {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width: 30%;
+}
+div.topicsBox div.smryBox > div.div2 {
+	width: 40%;
+}
+
+div.topicsBox div.smryBox > div img {
+	display: inline-block;
+	max-width: 100%;
+}
+
+div.topicsBox div.smryBox dl {
+	display: table-cell;
+	width: 70%;
+}
+
+div.topicsBox div.smryBox dt {
+	float: left;
+	clear: left;
+	width: 28%;
+	margin-right: 2%;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+div.topicsBox div.smryBox dd {
+	padding-left: 30%;
+	margin: 0;
+	padding-bottom: 5px;
+	word-break: break-all;
+}
+
+
+div.topicsBox div.smryBox dt:last-child,div.topicsBox div.smryBox dd:last-child {
+	padding-bottom: 0;
+}
+
+
+/******* ＝＝＝＝＝＝＝＝＝＝＝ デバイスｈ幅767px以内 ＝＝＝＝＝＝＝＝＝＝＝ ******/
+@media only screen and (max-width: 767px) {
+
+div.topicsBox {
+	margin: 0 10px 20px;
+	xfont-size: 2.2rem;
+}
+
+/*** h3 ～ h5 調整 ***/
+div.topicsBox h3,div.topicsBox h4,div.topicsBox h5 {
+	margin: 1.0em 0 20px 0;/*170915 edited by S*/
+	color: #013763;
+}
+
+div.topicsBox h3 {
+	xfont-size: 2.8rem;
+}
+
+div.topicsBox h4 {
+	xfont-size: 2.4rem;
+}
+
+div.topicsBox h5 {
+	xfont-size: 2.2rem;
+}
+
+
+/*** p　メイン ***/
+div.topicsBox p.topics-small {
+	xfont-size: 2.0rem;
+}
+
+/*** リスト 基本 ***/
+
+div.topicsBox dl.basic dt {
+    float: none;
+    width: auto;
+    font-weight: bold;
+}
+
+div.topicsBox dl.basic dd {
+    width: 100%;
+}
+
+div.topicsBox dl.basic dt {
+	margin-top: 0;
+}
+
+div.topicsBox dl.basic dd {
+	margin-bottom: 0.3em;
+	margin-top: 0;
+}
+
+div.topicsBox dl.basic dd:last-child {
+	margin-bottom: 0;
+}
+
+div.topicsBox ul.supplemental-list {
+	xfont-size: 2.0rem;
+}
+
+div.topicsBox ul.supplemental-list li {
+	padding-left: 2.1rem;
+}
+
+/*** 画像配置 ***/
+div.topicsBox div.image1-box figure,div.topicsBox div.image2-box figure,div.topicsBox div.image3-box figure,div.topicsBox div.image4-box figure {
+	margin: 0.5em 0 20px 0;/*170915 edited by S*/
+}
+
+div.topicsBox div.image1-box figure img,div.topicsBox div.image2-box figure img,div.topicsBox div.image3-box figure img,div.topicsBox div.image4-box figure img,div.topicsBox div.image5-box figure img {
+	width: auto;
+	max-width: 100% !important;
+}
+	
+div.topicsBox div.image2-box figure,div.topicsBox div.image3-box figure,div.topicsBox div.image4-box figure,div.topicsBox div.image5-box figure {
+	padding: 0;
+	margin-right: 2%;
+	width: 49%;
+}
+
+div.topicsBox div.image3-box figure:nth-child(3n),div.topicsBox div.image4-box figure:nth-child(4n),div.topicsBox div.image5-box figure:nth-child(5n) {
+	margin-right: 2%;
+}
+
+div.topicsBox div.image2-box figure:nth-child(2n),div.topicsBox div.image3-box figure:nth-child(2n),div.topicsBox div.image4-box figure:nth-child(2n),div.topicsBox div.image5-box figure:nth-child(2n) {
+	margin-right: 0;
+}
+
+div.topicsBox div.image5-box {
+	letter-spacing: normal;
+}
+
+div.topicsBox div.image5-box figure {
+	float: left;
+}
+
+div.topicsBox div.image5-box figure figcaption {
+    padding: 0;
+}
+
+div.topicsBox figcaption {
+	xfont-size: 1.8rem !important;
+}
+
+/*** ボックス ***/
+div.topicsBox .box.column2 {
+		margin: 0;
+		padding: 0;
+}
+
+div.topicsBox .box.column2 .box-left {
+	float: none;
+}
+
+div.topicsBox .box.column2 .box-left,div.topicsBox .box.column2 .box-right {
+	margin: 0;
+	width: 100%;
+}
+
+div.topicsBox .box.column2 .box-left.color,div.topicsBox .box.column2 .box-right.color {
+	margin-top: 1em;
+	padding: 1px 20px 10px 20px;
+}
+
+/*** テーブル ***/
+div.topicsBox div.table-box {
+	margin: 0;
+}
+
+div.topicsBox table.basic {
+	xfont-size: 2.2rem;
+}
+
+div.topicsBox .scroll-table {
+	overflow: auto;
+    white-space: nowrap;
+}
+
+/* 画像とテキストの回り込み */
+div.topicsBox .text-image-box.boxChange {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+div.topicsBox .text-image-box figure {
+	margin-left: 0;
+	text-align: center;
+}
+
+div.topicsBox .text-image-box figure {
+	max-width: 100%;
+	float: none;
+}
+
+div.topicsBox .text-image-box figure img {
+	max-width: 100%;
+}
+
+div.topicsBox .text-image-box.boxChange figure {
+	margin-top: 1em;
+}
+
+/* 画像とテキストの回り込み-left */
+div.topicsBox .text-image-box-left.boxChange {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+div.topicsBox .text-image-box-left figure {
+	margin-left: 0;
+	text-align: center;
+}
+
+div.topicsBox .text-image-box-left figure {
+	max-width: 100%;
+	float: none;
+}
+
+div.topicsBox .text-image-box-left figure img {
+	max-width: 100%;
+}
+
+div.topicsBox .text-image-box-left.boxChange figure {
+	margin-top: 1em;
+}
+	
+/*** 動画 ***/
+div.topicsBox .movie-box .movie1 {
+	width: 100%;
+}
+
+div.topicsBox .movie-box .caption {
+	xfont-size: 1.8rem !important;
+}
+
+/*** リンクボタン ***/
+
+div.topicsBox a.btn-base:hover {
+	background: #007fbd;
+	color: #FFF;
+	text-decoration: none;
+}
+
+div.topicsBox a.btn-base.small,div.topicsBox a.btn-base.normal,div.topicsBox a.btn-base.large {
+	width: 80%;
+}
+
+/*** セガ製品情報サイトのグレー枠 ***/
+div.topicsBox div.smryBox {
+	display: inherit;
+}
+
+div.topicsBox div.smryBox > div {
+	display: inherit;
+	width: 100%;
+	margin: 1em 0 20px 0;/*170915 edited by S*/
+}
+
+div.topicsBox div.smryBox dl {
+	display: inherit;
+	width: 100%;
+}
+
+div.topicsBox div.smryBox dt {
+	float: none;
+	width: inherit;
+	margin-right: 0;
+	padding-bottom: 0;
+}
+
+div.topicsBox div.smryBox dd {
+	padding-left: 0;
+	padding-bottom: 5px;
+}
+
+
+}

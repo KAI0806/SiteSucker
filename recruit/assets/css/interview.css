@@ -1,0 +1,943 @@
+
+
+/* intro
+----------------------------------------------- */
+
+/* js */
+
+.js-parallax-ready .intro__job,
+.js-parallax-ready .intro__category {
+	opacity: 0;
+	transform: translateX(5%);
+}
+.js-parallax-ready .intro__name,
+.js-parallax-ready .intro__date {
+	opacity: 0;
+	transform: translateX(-5%);
+}
+
+.js-parallax-start .intro__job,
+.js-parallax-start .intro__category,
+.js-parallax-start .intro__name,
+.js-parallax-start .intro__date {
+	opacity: 1;
+	transform: translateX(0);
+	transition-property: opacity, transform;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(1, 0, 0, 1);
+	transition-delay: 0.3s;
+}
+
+
+/* title
+----------------------------------------------- */
+
+/* js */
+
+.js-parallax-ready .title__label {
+	opacity: 0;
+	transform: translateX(5%);
+}
+.js-parallax-ready .title__text {
+	opacity: 0;
+	transform: translateX(-5%);
+}
+
+.js-parallax-start .title__label,
+.js-parallax-start .title__text {
+	opacity: 1;
+	transform: translateX(0);
+	transition-property: opacity, transform;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+
+/* other
+----------------------------------------------- */
+
+/* js */
+
+.js-parallax-ready.other:after {
+	opacity: 0;
+	transform: translateX(-50%) skewX(-30deg);
+}
+
+.js-parallax-start.other:after {
+	opacity: 1;
+	transform: translateX(0) skewX(-30deg);
+	transition-property: opacity, transform;
+	transition-duration: 0.85s;
+	transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+
+/* employee
+----------------------------------------------- */
+
+.employee-consumer .employee__title {
+	color: #fb8c32;
+}
+.employee-smartphone .employee__title {
+	color: #14b488;
+}
+.employee-pc .employee__title {
+	color: #3c65e9;
+}
+.employee-amusement .employee__title {
+	color: #cd3c62;
+}
+.employee-consumer .employee__title:before {
+	background-image: url("../../interview/images/ic_consumer.svg");
+}
+.employee-smartphone .employee__title:before {
+	background-image: url("../../interview/images/ic_smartphone.svg");
+}
+.employee-pc .employee__title:before {
+	background-image: url("../../interview/images/ic_pc.svg");
+}
+.employee-amusement .employee__title:before {
+	background-image: url("../../interview/images/ic_amusement.svg");
+}
+.employee-consumer .employee__job {
+	background: rgba(251,140,50,0.8);
+}
+.employee-smartphone .employee__job {
+	background: rgba(20,180,136,0.8);
+}
+.employee-pc .employee__job {
+	background: rgba(60,101,233,0.8);
+}
+.employee-amusement .employee__job {
+	background: rgba(205,60,98,0.8);
+}
+
+
+/* intro
+----------------------------------------------- */
+
+.intro__category-consumer {
+	color: #fb8c32;
+}
+.intro__category-smartphone {
+	color: #14b488;
+}
+.intro__category-pc {
+	color: #3c65e9;
+}
+.intro__category-amusement {
+	color: #cd3c62;
+}
+.intro__category-consumer:before {
+	background-image: url("../../interview/images/ic_consumer.svg");
+}
+.intro__category-smartphone:before {
+	background-image: url("../../interview/images/ic_smartphone.svg");
+}
+.intro__category-pc:before {
+	background-image: url("../../interview/images/ic_pc.svg");
+}
+.intro__category-amusement:before {
+	background-image: url("../../interview/images/ic_amusement.svg");
+}
+
+
+
+/* pc
+----------------------------------------------- */
+
+@media print, screen and (min-width:1000px) {
+
+
+	/* pagetitle-interview
+	----------------------------------------------- */
+
+	.pagetitle-interview {
+		position: relative;
+		padding: 130px 0 90px;
+	}
+	.pagetitle-interview .pagetitle__inner {
+		margin: auto;
+		padding: 60px 20px 50px;
+		width: 210px;
+		background: rgba(0,150,250,0.8);
+	}
+	.pagetitle-interview .pagetitle__text {
+		margin: 0;
+		font-size: 38px;
+		color: #fff;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+	}
+	.pagetitle-interview .pagetitle__label {
+		margin: 15px 0 0;
+		font-size: 18px;
+		color: #fff;
+	}
+	.pagetitle-interview.pagetitle:before {
+		display: none;
+	}
+	.pagetitle-interview.pagetitle:after {
+		background: url("../../interview/images/mainimage.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		opacity: 1;
+	}
+
+
+	/* anchornav
+	----------------------------------------------- */
+	.anchornav {
+		background: rgba(0,150,250,0.8);
+		transform: translateY(-100%);
+	}
+	.anchornav__items {
+		padding: 5px 0;
+	}
+
+
+	/* content
+	----------------------------------------------- */
+
+	.content__title-interview {
+		padding: 100px 0 0;
+		margin: -60px 0 0;
+	}
+	.content__title-interview-new {
+		padding: 160px 0 0;
+		margin: -60px 0 0;
+	}
+	.content__subtitle {
+		margin: 55px 0 0;
+	}
+	.content__image {
+		padding: 55px 0 0;
+	}
+	.content__columns .content__subtitle {
+		margin: 50px 40px 0 0;
+	}
+	.content__columns-reverse .content__subtitle {
+		margin: 50px 0 0 40px;
+	}
+
+
+	/* employee
+	----------------------------------------------- */
+
+	.employee {
+		margin: 0 -10px;
+		text-align: center;
+	}
+	.employee__title {
+		display: inline-block;
+		position: relative;
+		margin: 60px 0 0;
+		padding: 0 0 0 20px;
+		font-size: 20px;
+		font-weight: 700;
+		vertical-align: middle;
+		letter-spacing: 0.1em;
+		z-index: 1;
+	}
+	.employee__title:before {
+		display: inline-block;
+		content: "";
+		margin: -6px 10px 0 0;
+		width: 20px;
+		height: 20px;
+		vertical-align: middle;
+		background-repeat: no-repeat;
+		background-size: 20px;
+	}
+	.employee__items {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 10px 0 0;
+		z-index: 1;
+	}
+	.employee__item {
+		position: relative;
+		margin: 20px 10px 0;
+		width: 235px;
+		height: 235px;
+		text-align: center;
+	}
+	.employee__item a {
+		display: block;
+		color: #fff;
+		background: linear-gradient(135deg, rgba(233,233,233,1) 0%,rgba(255,255,255,1) 100%);
+	}
+	.employee-new .employee__item a {
+		background: linear-gradient(135deg, rgba(178,223,253,1) 0%,rgba(255,255,255,1) 100%);
+	}
+	.employee-new .employee__item:nth-child(even) a {
+		background: linear-gradient(135deg, rgba(178,238,255,1) 0%,rgba(255,255,255,1) 100%);
+	}
+	.employee__job {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		padding: 10px 5px;
+		width: 100%;
+		background: rgba(0,150,250,0.8);
+		box-sizing: border-box;
+	}
+	.employee__job .subtitle__text {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 23px;
+	}
+	.employee__image img {
+		width: 100%;
+		height: auto;
+	}
+
+	/* hover */
+
+	.employee__item a img {
+		transition-property: opacity;
+		transition-duration: 0.25s;
+	}
+	.employee__item a:hover img {
+		opacity: 0.7;
+	}
+
+
+	/* title
+	----------------------------------------------- */
+
+	.title {
+		position: relative;
+		color: #0096fa;
+		font-size: 0;
+		text-align: center;
+		z-index: 1;
+	}
+	.title__label {
+		font-family: "Oswald";
+		font-size: 50px;
+		font-weight: 400;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+	}
+	.title__text {
+		position: relative;
+		margin: 10px 0 0;
+		font-size: 18px;
+		font-weight: 700;
+		text-indent: 0.2em;
+		letter-spacing: 0.2em;
+		z-index: 1;
+	}
+	.title__label-small {
+		font-size: 40px;
+	}
+
+
+	/* intro
+	----------------------------------------------- */
+
+	.intro {
+		background: #e5f4fe;
+	}
+	.intro__inner {
+		margin: auto;
+		width: 1000px;
+		display: flex;
+		align-items: center;
+	}
+	.intro__image,
+	.intro__title {
+		width: 50%;
+		box-sizing: border-box;
+	}
+	.intro__title {
+		padding: 0 0 0 40px;
+	}
+	.intro__job {
+		display: block;
+		color: #0096fa;
+		font-size: 20px;
+		line-height: 28px;
+		letter-spacing: 0.1em;
+	}
+	.intro__name {
+		display: block;
+		padding: 8px 0 0;
+		font-size: 34px;
+		line-height: 1.4;
+		letter-spacing: 0.1em;
+	}
+	.intro__date {
+		display: block;
+		padding: 20px 0 0;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.intro__image {
+		text-align: right;
+	}
+	.intro__image img {
+		width: 400px;
+		height: auto;
+	}
+
+	/* senior */
+
+	.intro-senior {
+		background: linear-gradient(to right, rgba(233,233,233,1) 0%,rgba(244,244,244,1) 100%);
+	}
+	.intro__category {
+		display: inline-block;
+		position: relative;
+		font-size: 16px;
+		font-weight: 700;
+		vertical-align: middle;
+		letter-spacing: 0.1em;
+	}
+	.intro__category:before {
+		display: inline-block;
+		content: "";
+		margin: -4px 5px 0 0;
+		width: 16px;
+		height: 16px;
+		vertical-align: middle;
+		background-repeat: no-repeat;
+		background-size: 16px;
+	}
+	.intro-senior .intro__job {
+		padding: 10px 0 0;
+		color: #7e7e7e;
+	}
+
+
+	/* schedule
+	----------------------------------------------- */
+
+	.schedule {
+		margin: 95px 0 0;
+		position: relative;
+		margin-left: calc(((100vw - 100%) / 2) * -1);
+		margin-right: calc(((100vw - 100%) / 2) * -1);
+		background: #e5f4fe;
+	}
+	.schedule__inner {
+		margin: auto;
+		width: 1000px;
+		min-height: 375px;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.schedule__summary {
+		position: relative;
+		padding: 10px 30px 15px;
+		width: 460px;
+		min-height: 375px;
+		background: #fff;
+		border-left: 1px solid #d4d4d4;
+		box-sizing: border-box;
+		z-index: 1;
+	}
+	.schedule__summary-wide {
+		width: 560px;
+	}
+	.schedule__title {
+		position: absolute;
+		top: -50px;
+		left: -1px;
+		display: inline-block;
+		padding: 0 30px;
+		height: 50px;
+		color: #0096fa;
+		font-family: "Oswald";
+		font-size: 18px;
+		font-weight: 500;
+		text-align: center;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		line-height: 48px;
+		background: #e5f4fe;
+		border-left: 1px solid #d4d4d4;
+		box-sizing: border-box;
+	}
+	.schedule__text {
+		margin: 5px 0 0;
+		display: flex;
+		font-size: 14px;
+		line-height: 23px;
+	}
+	.schedule__time {
+		padding: 0 10px 0 0;
+		min-width: 60px;
+		color: #0096fa;
+		letter-spacing: 0.1em;
+		box-sizing: border-box;
+	}
+	.schedule__image {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		bottom: 0;
+		margin: 0 0 0 -505px;
+		overflow: hidden;
+	}
+	.schedule__image img {
+		width: auto;
+		height: auto;
+		max-height: 100%;
+	}
+	
+	/* schedule-reverse */
+
+	.schedule-reverse .schedule__inner {
+		justify-content: flex-start;
+	}
+	.schedule-reverse .schedule__image {
+		margin: 0 0 0 -105px;
+	}
+
+
+	/* other
+	----------------------------------------------- */
+
+	.other {
+		margin: 105px 0 0;
+		position: relative;
+	}
+	.other:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 20px;
+		right: 50%;
+		margin: 0 110px 0 0;
+		width: 100vw;
+		height: 200px;
+		background: #e5f4fe;
+		transform: skewX(-30deg);
+	}
+	.other .employee {
+		margin: 10px 0 0;
+	}
+	.other .employee__item {
+		margin: 10px 0 0;
+		width: 250px;
+		height: 250px;
+	}
+	.other + .buttons {
+		padding: 0;
+	}
+
+	/* senior */
+
+	.other-senior .employee {
+		position: relative;
+		margin: 30px 0 0;
+		text-align: left;
+	}
+	.other-senior .employee:before {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 1px;
+		background: #d4d4d4;
+		z-index: 2;
+	}
+	.other-senior .employee__title {
+		margin: 0;
+	}
+	.other-senior .employee-consumer,
+	.other-senior .employee-pc {
+		width: 500px;
+	}
+	.other-senior .employee__item {
+		width: 125px;
+		height: 125px;
+	}
+	.other-senior .employee__job {
+		height: 40px;
+		padding: 5px;
+		box-sizing: border-box;
+	}
+	.other-senior .subtitle__text {
+		font-size: 10px;
+		font-weight: 700;
+		line-height: 14px;
+	}
+	.other__categories {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	/* hover */
+
+	.other__item a img {
+		transition-property: opacity;
+		transition-duration: 0.25s;
+	}
+	.other__item a:hover img {
+		opacity: 0.7;
+	}
+
+
+}
+
+
+/* mobile
+----------------------------------------------- */
+
+@media only screen and (max-width:999px) {
+
+
+	/* pagetitle-interview
+	----------------------------------------------- */
+
+	.pagetitle-interview {
+		padding: 80px 50px 35px;
+	}
+	.pagetitle-interview .pagetitle__inner {
+		margin: auto;
+		padding: 20px;
+		max-width: 320px;
+		background: rgba(0,150,250,0.8);
+	}
+	.pagetitle-interview.pagetitle:after {
+		background: url("../../interview/images/mainimage.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		opacity: 1;
+	}
+	.pagetitle-interview .pagetitle__text {
+		margin: 0;
+		font-size: 19px;
+		color: #fff;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+	}
+	.pagetitle-interview .pagetitle__label {
+		margin: 10px 0 0;
+		font-size: 10px;
+		color: #fff;
+	}
+	.pagetitle-interview.pagetitle:before {
+		display: none;
+	}
+
+
+	/* content
+	----------------------------------------------- */
+
+	.content__title-interview {
+		padding: 106px 0 0;
+		margin: -66px 0 0;
+	}
+	.content__title-interview-new {
+		padding: 106px 0 0;
+		margin: -66px 0 0;
+	}
+	.content__subtitle {
+		padding: 40px 0 0;
+	}
+	.content__columns .content__subtitle {
+		padding: 25px 0 0;
+	}
+
+
+	/* employee
+	----------------------------------------------- */
+
+	.employee {
+		text-align: center;
+	}
+	.employee__title {
+		display: inline-block;
+		margin: 30px 0 0;
+		position: relative;
+		font-size: 16px;
+		font-weight: bold;
+		vertical-align: middle;
+		letter-spacing: 0.1em;
+		z-index: 1;
+	}
+	.employee__title:before {
+		display: inline-block;
+		content: "";
+		margin: -4px 5px 0 0;
+		width: 16px;
+		height: 16px;
+		vertical-align: middle;
+		background-repeat: no-repeat;
+		background-size: 16px;
+	}
+	.employee__items {
+		position: relative;
+		margin: 10px 15px 0;
+		display: flex;
+		flex-wrap: wrap;
+		z-index: 1;
+	}
+	.employee__item {
+		position: relative;
+		margin: 10px 0 0;
+		padding: 0 5px;
+		width: 50%;
+		box-sizing: border-box;
+	}
+	.employee__item a {
+		display: block;
+		color: #fff;
+		background: linear-gradient(135deg, rgba(233,233,233,1) 0%,rgba(255,255,255,1) 100%);
+	}
+	.employee-new .employee__item a {
+		background: linear-gradient(135deg, rgba(178,223,253,1) 0%,rgba(255,255,255,1) 100%);
+	}
+	.employee-new .employee__item:nth-child(2) a,
+	.employee-new .employee__item:nth-child(3) a {
+		background: linear-gradient(135deg, rgba(178,238,255,1) 0%,rgba(255,255,255,1) 100%);
+	}
+	.employee__job {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		left: 5px;
+		right: 5px;
+		bottom: 0;
+		padding: 5px 2px 3px;
+		background: rgba(0,150,250,0.8);
+		box-sizing: border-box;
+	}
+	.employee__job .subtitle__text {
+		font-size: 10px;
+		font-weight: bold;
+		line-height: 13px;
+	}
+	.employee__image img {
+		width: 100%;
+		height: auto;
+	}
+
+
+	/* title
+	----------------------------------------------- */
+
+	.title {
+		position: relative;
+		color: #0096fa;
+		font-size: 0;
+		text-align: center;
+		z-index: 1;
+	}
+	.title__label {
+		font-family: "Oswald";
+		font-size: 30px;
+		font-weight: 400;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+	}
+	.title__text {
+		position: relative;
+		margin: 8px 0 0;
+		font-size: 12px;
+		font-weight: bold;
+		text-indent: 0.2em;
+		letter-spacing: 0.2em;
+		z-index: 1;
+	}
+	.title__label-small {
+		font-size: 25px;
+	}
+
+
+	/* intro
+	----------------------------------------------- */
+
+	.intro {
+		background: #e5f4fe;
+	}
+	.intro__inner {
+		padding: 20px 0 0;
+	}
+	.intro__title {
+		padding: 10px 20px;
+		background: linear-gradient(135deg, rgba(128,202,252,1) 0%,rgba(229,244,254,1) 100%);
+		text-align: center;
+	}
+	.intro__job {
+		display: block;
+		color: #0096fa;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: bold;
+	}
+	.intro__name {
+		display: block;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.1em;
+	}
+	.intro__date {
+		display: block;
+		padding: 5px 0 0;
+		font-size: 10px;
+	}
+	.intro__image {
+		margin: 0 40px;
+		text-align: center;
+	}
+	.intro__image img {
+		max-width: 300px;
+		width: 100%;
+		height: auto;
+	}
+
+	/* senior */
+
+	.intro-senior {
+		background: linear-gradient(to right, rgba(233,233,233,1) 0%,rgba(244,244,244,1) 100%);
+	}
+	.intro__category {
+		display: inline-block;
+		position: relative;
+		font-size: 10px;
+		font-weight: bold;
+		vertical-align: middle;
+		letter-spacing: 0.1em;
+	}
+	.intro__category:before {
+		display: inline-block;
+		content: "";
+		margin: -4px 5px 0 0;
+		width: 10px;
+		height: 10px;
+		vertical-align: middle;
+		background-repeat: no-repeat;
+		background-size: 10px;
+	}
+	.intro-senior .intro__title {
+		background: linear-gradient(to right, rgba(211,211,211,1) 0%,rgba(255,255,255,1) 100%);
+	}
+	.intro-senior .intro__job {
+		color: #7e7e7e;
+	}
+
+
+	/* schedule
+	----------------------------------------------- */
+
+	.schedule {
+		margin: 77px 0 0;
+		background: #e5f4fe;
+	}
+	.schedule__inner {
+		position: relative;
+	}
+	.schedule__summary {
+		position: relative;
+		margin: 0 20px;
+		padding: 10px 15px;
+		background: #fff;
+		border-left: 1px solid #d4d4d4;
+		border-right: 1px solid #d4d4d4;
+		box-sizing: border-box;
+		z-index: 1;
+	}
+	.schedule__title {
+		position: absolute;
+		top: -32px;
+		left: -1px;
+		right: -1px;
+		display: inline-block;
+		padding: 0 30px;
+		height: 32px;
+		color: #0096fa;
+		font-family: "Oswald";
+		font-size: 15px;
+		font-weight: 500;
+		text-align: center;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		line-height: 32px;
+		background: #e5f4fe;
+		border-left: 1px solid #d4d4d4;
+		border-right: 1px solid #d4d4d4;
+		box-sizing: border-box;
+	}
+	.schedule__text {
+		margin: 5px 0 0;
+		display: flex;
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.schedule__time {
+		padding: 0 10px 0 0;
+		min-width: 50px;
+		color: #0096fa;
+		box-sizing: border-box;
+	}
+	.schedule__image {
+		margin: -15px 0 0;
+		overflow: hidden;
+	}
+	.schedule__image img {
+		width: 100%;
+		height: auto;
+	}
+
+
+	/* other
+	----------------------------------------------- */
+
+	.other {
+		position: relative;
+		margin: 50px 0 0;
+	}
+	.other:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 15px;
+		right: 50%;
+		margin: 0 20px 0 0;
+		width: 100%;
+		height: 200px;
+		background: #e5f4fe;
+		transform: skewX(-15deg);
+	}
+	.other .employee__items {
+		margin: 20px 0 0;
+	}
+	.other .employee__item {
+		margin: 0;
+		padding: 0;
+	}
+	.other .employee__job {
+		left: 0;
+		right: 0;
+	}
+	.other .employee__image img {
+		width: 50%;
+	}
+
+	/* js */
+	
+	.js-parallax-ready.other:after {
+		transform: translateX(-50%) skewX(-15deg);
+	}
+	
+	.js-parallax-start.other:after {
+		transform: translateX(0) skewX(-15deg);
+	}
+
+
+}
+

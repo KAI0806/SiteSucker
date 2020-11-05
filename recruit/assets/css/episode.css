@@ -1,0 +1,682 @@
+
+
+/* intro
+----------------------------------------------- */
+
+/* js */
+
+.js-parallax-ready.intro__text span {
+	opacity: 0;
+	transform: translateX(-5%);
+}
+
+.js-parallax-start.intro__text span {
+	opacity: 1;
+	transform: translateX(0);
+	transition-property: opacity, transform;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(1, 0, 0, 1);
+	transition-delay: 0.3s;
+}
+
+
+/* title
+----------------------------------------------- */
+
+/* js */
+
+.js-parallax-ready .title__label {
+	opacity: 0;
+	transform: translateX(5%);
+}
+.js-parallax-ready .title__text {
+	opacity: 0;
+	transform: translateX(-5%);
+}
+
+.js-parallax-start .title__label,
+.js-parallax-start .title__text {
+	opacity: 1;
+	transform: translateX(0);
+	transition-property: opacity, transform;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+
+/* other
+----------------------------------------------- */
+
+/* js */
+
+.js-parallax-ready.other:after {
+	opacity: 0;
+	transform: translateX(-50%) skewX(-30deg);
+}
+
+.js-parallax-start.other:after {
+	opacity: 1;
+	transform: translateX(0) skewX(-30deg);
+	transition-property: opacity, transform;
+	transition-duration: 0.85s;
+	transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+
+/* pc
+----------------------------------------------- */
+
+@media print, screen and (min-width:1000px) {
+
+
+	/* intro
+	----------------------------------------------- */
+
+	.intro {
+		padding: 30px 0 0;
+		margin: auto;
+		width: 1000px;
+	}
+	.intro__inner {
+		position: relative;
+		overflow: hidden;
+	}
+	.intro__image img {
+		width: 100%;
+		height: auto;
+	}
+	.intro__text {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		left: -30px;
+		bottom: 20px;
+		padding: 20px 30px 20px 50px;
+		color: #fff;
+		font-size: 24px;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		line-height: 26px;
+	}
+	.intro__text:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #0096fa;
+		transform: skewX(-30deg);
+		opacity: 0.8;
+	}
+	.intro__text span {
+		position: relative;
+		z-index: 1;
+	}
+	.intro__text-sub {
+		display: inline-block;
+		font-size: 16px;
+	}
+
+
+	/* member
+	----------------------------------------------- */
+
+	.member {
+		margin: 40px auto 0;
+		padding: 10px 0 30px;
+		width: 1000px;
+		background: #e5f4fe;
+		box-sizing: border-box;
+	}
+	.member__inner {
+		position: relative;
+	}
+	.member__title {
+		position: absolute;
+		top: -22px;
+		left: 0;
+		right: 0;
+		color: #0096fa;
+		font-family: "Oswald";
+		font-size: 24px;
+		font-weight: 400;
+		text-indent: 0.1em;
+		text-align: center;
+		letter-spacing: 0.1em;
+	}
+	.member__items {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 15px;
+	}
+	.member__item {
+		position: relative;
+		margin: 30px 15px 0;
+		width: 455px;
+		min-height: 130px;
+	}
+	.member__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 110px;
+	}
+	.member__image img {
+		width: 100%;
+		height: auto;
+	}
+	.member__prof {
+		margin: 0 0 0 125px;
+	}
+	.member__job,
+	.member__name {
+		display: block;
+		font-size: 16px;
+		letter-spacing: 0.1em;
+	}
+	.member__job {
+		padding: 0 0 8px;
+		color: #7e7e7e;
+		font-size: 14px;
+	}
+	.member__text {
+		margin: 8px 0 0 0;
+		font-size: 12px;
+		line-height: 16px;
+		text-align: justify;
+		text-justify: inter-ideograph;
+	}
+
+
+	/* question
+	----------------------------------------------- */
+
+	.question {
+		position: relative;
+		margin: 60px 0 0;
+		padding: 2px 0 0 30px;
+		font-size: 20px;
+		line-height: 25px;
+		letter-spacing: 0.1em;
+	}
+	.question:before {
+		display: block;
+		content: "Q";
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: #0096fa;
+		font-family: "Oswald";
+		font-size: 30px;
+		font-weight: 400;
+		z-index: 1;
+	}
+
+
+	/* answer content
+	----------------------------------------------- */
+
+	.answer {
+		position: relative;
+	}
+	.answer__name {
+		position: absolute;
+		top: 25px;
+		left: 0;
+		padding: 5px 0;
+		width: 70px;
+		color: white;
+		font-size: 12px;
+		font-weight: 700;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		text-align: center;
+		background: #7e7e7e;
+	}
+	.answer .content__text {
+		margin: 0 0 0 80px;
+	}
+	.content__column:first-child .answer .content__text {
+		margin: 0 40px 0 80px;
+	}
+	.content__columns .content__column .answer__name {
+		top: 30px;
+	}
+	.content__columns-reverse .content__column .answer .content__text {
+		margin: 0 0 0 120px;
+	}
+	.content__columns-reverse .content__column .answer__name {
+		left: 40px;
+	}
+	.content__image-wide {
+		padding: 60px 0 0;
+	}
+	.content__copyright {
+		padding: 3px 0 0;
+		text-align: right;
+		font-size: 12px;
+		line-height: 1.5;
+	}
+	.content__text.content__copyright {
+		padding: 15px 0 0;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	.content__column-textmiddle {
+		display: flex;
+		align-items: center;
+	}
+
+
+	/* title
+	----------------------------------------------- */
+
+	.title {
+		position: relative;
+		color: #0096fa;
+		font-size: 0;
+		text-align: center;
+		z-index: 1;
+	}
+	.title__label {
+		font-family: "Oswald";
+		font-size: 50px;
+		font-weight: 400;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+	}
+	.title__text {
+		position: relative;
+		margin: 10px 0 0;
+		font-size: 18px;
+		font-weight: 700;
+		text-indent: 0.2em;
+		letter-spacing: 0.2em;
+		z-index: 1;
+	}
+	.title__label-small {
+		font-size: 40px;
+	}
+
+
+	/* other
+	----------------------------------------------- */
+
+	.other {
+		margin: 105px 0 0;
+		position: relative;
+	}
+	.other:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 20px;
+		right: 50%;
+		margin: 0 110px 0 0;
+		width: 100vw;
+		height: 200px;
+		background: #e5f4fe;
+		transform: skewX(-30deg);
+	}
+	.other__items {
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		margin: 30px auto 0;
+		width: 940px;
+	}
+	.other__item {
+		position: relative;
+		padding: 0 0 18px;
+		margin: 15px 20px 0;
+		width: 430px;
+		z-index: 1;
+	}
+	.other__item a {
+		display: block;
+		position: relative;
+		color: #fff;
+		box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+	}
+	.other__image img {
+		width: 100%;
+		height: auto;
+	}
+	.other__text {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		right: -15px;
+		bottom: -18px;
+		padding: 10px 90px 10px 20px;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 20px;
+	}
+	.other__text:before {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 30px;
+		margin: -6px 0 0;
+		width: 50px;
+		height: 8px;
+		background: url("../images/ic_arrow_large_white.svg") no-repeat;
+		background-size: 50px 8px;
+		z-index: 1;
+	}
+	.other__text:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #0096fa;
+		transform: skewX(-30deg);
+	}
+	.other__text span {
+		position: relative;
+		z-index: 1;
+	}
+	.other__text-sub {
+		font-size: 14px;
+	}
+
+	/* hover */
+	
+	.other__item a .other__text {
+		transition-property: transform;
+		transition-duration: 0.25s;
+		transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+	}
+	.other__item a:hover .other__text {
+		transform: translateX(5px);
+	}
+	
+	.other__item a .other__image img {
+		transition-property: opacity;
+		transition-duration: 0.25s;
+	}
+	.other__item a:hover .other__image img {
+		opacity: 0.7;
+	}
+
+
+}
+
+
+/* mobile
+----------------------------------------------- */
+
+@media only screen and (max-width:999px) {
+
+
+	/* intro
+	----------------------------------------------- */
+
+	.intro__image img {
+		width: 100%;
+		height: auto;
+	}
+	.intro__text {
+		padding: 10px;
+		color: #fff;
+		font-size: 16px;
+		font-weight: bold;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		line-height: 20px;
+		text-align: center;
+		background: #0096fa;
+	}
+	.intro__text-sub {
+		font-size: 12px;
+	}
+
+
+	/* member
+	----------------------------------------------- */
+
+	.member {
+		background: #e5f4fe;
+	}
+	.member__inner {
+		margin: auto;
+		padding: 20px 0;
+		max-width: 640px;
+	}
+	.member__title {
+		color: #0096fa;
+		font-family: "Oswald";
+		font-size: 15px;
+		font-weight: 400;
+		text-indent: 0.1em;
+		text-align: center;
+		letter-spacing: 0.1em;
+	}
+	.member__item {
+		display: flex;
+		position: relative;
+		margin: 20px 20px 0;
+	}
+	.member__image {
+		width: 19.6%;
+	}
+	.member__image img {
+		width: 100%;
+		height: auto;
+	}
+	.member__prof {
+		padding: 0 0 0 10px;
+		width: 76.7%;
+		box-sizing: border-box;
+	}
+	.member__job,
+	.member__name {
+		display: block;
+		font-size: 14px;
+	}
+	.member__job {
+		padding: 0 0 8px;
+		color: #7e7e7e;
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.member__text {
+		margin: 8px 0 0 0;
+		font-size: 10px;
+		line-height: 15px;
+		text-align: justify;
+	}
+
+
+	/* question
+	----------------------------------------------- */
+
+	.question {
+		position: relative;
+		margin: 40px 0 0;
+		padding: 0 20px 0 40px;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.1em;
+	}
+	.question:before {
+		display: block;
+		content: "Q";
+		position: absolute;
+		top: -3px;
+		left: 20px;
+		color: #0096fa;
+		font-family: "Oswald";
+		font-size: 20px;
+		font-weight: 400;
+		z-index: 1;
+	}
+
+
+	/* answer content
+	----------------------------------------------- */
+
+	.answer {
+		position: relative;
+	}
+	.answer__name {
+		display: block;
+		margin: 15px 20px -15px;
+		padding: 3px 0;
+		width: 70px;
+		color: white;
+		font-size: 10px;
+		font-weight: bold;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+		text-align: center;
+		background: #7e7e7e;
+	}
+	.content__columns {
+		padding: 0;
+	}
+	.content__column:first-of-type .content__image {
+		padding: 15px 0 0;
+	}
+	.content__image-wide {
+		margin: 40px 0 0;
+	}
+	.content__copyright {
+		padding: 3px 0 0;
+		text-align: right;
+		font-size: 10px;
+		line-height: 1.5;
+	}
+	.content__text.content__copyright {
+		padding: 15px 0 0;
+		text-align: left;
+		letter-spacing: normal;
+	}
+
+
+	/* title
+	----------------------------------------------- */
+
+	.title {
+		position: relative;
+		color: #0096fa;
+		font-size: 0;
+		text-align: center;
+		z-index: 1;
+	}
+	.title__label {
+		font-family: "Oswald";
+		font-size: 30px;
+		font-weight: 400;
+		text-indent: 0.1em;
+		letter-spacing: 0.1em;
+	}
+	.title__text {
+		position: relative;
+		margin: 8px 0 0;
+		font-size: 12px;
+		font-weight: bold;
+		text-indent: 0.2em;
+		letter-spacing: 0.2em;
+		z-index: 1;
+	}
+	.title__label-small {
+		font-size: 25px;
+	}
+
+
+	/* other
+	----------------------------------------------- */
+
+	.other {
+		position: relative;
+		margin: 50px 0 0;
+	}
+	.other:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 15px;
+		right: 50%;
+		margin: 0 20px 0 0;
+		width: 100%;
+		height: 200px;
+		background: #e5f4fe;
+		transform: skewX(-15deg);
+	}
+	.other__items {
+		margin: 20px 0 0;
+	}
+	.other__item {
+		position: relative;
+		margin: 5px 20px 0;
+		z-index: 1;
+	}
+	.other__item a {
+		display: block;
+		color: #fff;
+		box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+		background: #0096fa;
+	}
+	.other__item a:before {
+		display: block;
+		content: "";
+		position: absolute;
+		right: 15px;
+		bottom: 10px;
+		width: 50px;
+		height: 8px;
+		background: url("../images/ic_arrow_large_white.svg") no-repeat;
+		background-size: 50px 8px;
+		z-index: 1;
+	}
+	.other__image {
+		position: relative;
+		padding: 24.6% 0 0;
+		width: 35.5%;
+		overflow: hidden;
+		z-index: 1;
+	}
+	.other__image img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 151%;
+		height: auto;
+		transform: translateX(-50%);
+	}
+	.other__text {
+		position: absolute;
+		top: 50%;
+		left: 35.5%;
+		right: 0;
+		padding: 0 15px 0 10px;
+		font-size: 12px;
+		font-weight: bold;
+		line-height: 14px;
+		transform: translateY(-50%);
+	}
+	.other__text-sub {
+		font-size: 10px;
+	}
+
+	/* js */
+	
+	.js-parallax-ready.other:after {
+		transform: translateX(-50%) skewX(-15deg);
+	}
+	
+	.js-parallax-start.other:after {
+		transform: translateX(0) skewX(-15deg);
+	}
+
+
+}
+
